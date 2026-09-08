@@ -11,75 +11,93 @@
 
 <style>
 
+
 body {
 
-    background:#080808;
-    color:white;
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
+background:#080808;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
 
 }
+
 
 
 .container {
 
-    width:85%;
-    margin:50px auto;
+width:85%;
+margin:40px auto;
 
 }
+
 
 
 h1 {
 
-    font-size:38px;
+font-size:36px;
+margin-bottom:35px;
 
 }
 
 
-/* MAIN IMAGE AREA */
+
+/* MAIN GALLERY */
+
 
 .main-image {
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:25px;
 
 }
+
 
 
 .main-image img {
 
-    width:670px;
-    height:380px;
-    object-fit:cover;
+width:750px;
+height:420px;
+object-fit:cover;
 
 }
+
 
 
 /* ARROWS */
 
+
 .arrow {
 
-    background:rgba(255,255,255,0.15);
-    color:white;
-    border:none;
-    font-size:45px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    cursor:pointer;
-    transition:0.3s;
+width:55px;
+height:55px;
+
+border-radius:50%;
+
+background:#222;
+
+border:1px solid #555;
+
+color:white;
+
+font-size:35px;
+
+cursor:pointer;
+
+transition:0.3s;
 
 }
+
 
 
 .arrow:hover {
 
-    background:white;
-    color:black;
+background:white;
+color:black;
 
 }
+
 
 
 
@@ -88,25 +106,33 @@ h1 {
 
 .gallery {
 
-    display:flex;
-    gap:12px;
-    margin-top:15px;
+display:flex;
+
+gap:10px;
+
+margin-top:20px;
+
+overflow-x:auto;
 
 }
 
 
+
 .gallery img {
 
-    width:150px;
-    height:85px;
-    object-fit:cover;
-    cursor:pointer;
+width:130px;
 
-    opacity:0.55;
+height:75px;
 
-    border:3px solid transparent;
+object-fit:cover;
 
-    transition:0.3s;
+cursor:pointer;
+
+opacity:0.45;
+
+border:3px solid transparent;
+
+transition:0.3s;
 
 }
 
@@ -114,7 +140,7 @@ h1 {
 
 .gallery img:hover {
 
-    opacity:1;
+opacity:1;
 
 }
 
@@ -122,33 +148,38 @@ h1 {
 
 .gallery img.active {
 
-    opacity:1;
+opacity:1;
 
-    border:3px solid white;
+border:3px solid white;
 
 }
+
 
 
 
 /* TEXT */
 
+
 .description {
 
-    margin-top:30px;
+margin-top:35px;
 
-    font-size:18px;
+max-width:900px;
 
-    line-height:1.6;
+font-size:17px;
+
+line-height:1.6;
+
+}
+
+
+
+.description h2 {
+
+margin-top:35px;
 
 }
 
-
-
-h2 {
-
-    margin-top:35px;
-
-}
 
 
 
@@ -157,19 +188,29 @@ h2 {
 
 .steam {
 
-    display:inline-block;
+display:inline-block;
 
-    margin-top:30px;
+margin-top:30px;
 
-    padding:15px 35px;
+background:white;
 
-    background:white;
+color:black;
 
-    color:black;
+padding:14px 35px;
 
-    text-decoration:none;
+font-weight:bold;
 
-    font-weight:bold;
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+
+
+.steam:hover {
+
+background:#ddd;
 
 }
 
@@ -179,6 +220,7 @@ h2 {
 
 
 </head>
+
 
 
 <body>
@@ -207,6 +249,7 @@ h2 {
 
 
 
+
 <div class="gallery">
 
 
@@ -223,7 +266,10 @@ h2 {
 <img src="screenshot11.jpg" onclick="setImage(10)">
 
 
+
 </div>
+
+
 
 
 
@@ -231,9 +277,13 @@ h2 {
 
 
 <p>
-The first chapter of the Terrors to Unveil series.
+
+Terrors to Unveil: Intrusion is the first chapter of an anthology horror series.
+
 Explore a disturbing story where ordinary places hide something much darker.
+
 </p>
+
 
 
 <h2>About the Game</h2>
@@ -243,19 +293,21 @@ Explore a disturbing story where ordinary places hide something much darker.
 
 Terrors to Unveil: Intrusion is a psychological horror experience focused on atmosphere, exploration and terrifying encounters.
 
+Discover hidden secrets, unsettling events and a story that slowly reveals the truth.
+
 </p>
 
 
 
-</div>
-
-
-
-<a class="steam" href="ΒΑΛΕ_ΕΔΩ_TO_STEAM_LINK" target="_blank">
+<a class="steam" href="ΒΑΛΕ_ΕΔΩ_ΤΟ_STEAM_LINK" target="_blank">
 
 VIEW ON STEAM
 
 </a>
+
+
+
+</div>
 
 
 
@@ -286,6 +338,7 @@ let images = [
 ];
 
 
+
 let current = 0;
 
 
@@ -306,19 +359,26 @@ updateActive();
 
 
 
-
 function changeImage(direction){
 
 
 current += direction;
 
 
-if(current < 0)
+
+if(current < 0){
+
 current = images.length-1;
 
+}
 
-if(current >= images.length)
+
+
+if(current >= images.length){
+
 current = 0;
+
+}
 
 
 
@@ -326,7 +386,6 @@ document.getElementById("mainScreenshot").src = images[current];
 
 
 updateActive();
-
 
 
 }
@@ -340,13 +399,19 @@ function updateActive(){
 let thumbs=document.querySelectorAll(".gallery img");
 
 
-thumbs.forEach(img=>img.classList.remove("active"));
+thumbs.forEach(img=>{
+
+img.classList.remove("active");
+
+});
+
 
 
 thumbs[current].classList.add("active");
 
 
 }
+
 
 
 </script>
