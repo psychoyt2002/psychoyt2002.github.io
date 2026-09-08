@@ -48,9 +48,26 @@ p{
     margin-top:20px;
 }
 
-.gallery img{
-    width:300px;
-    margin:10px;
+.gallery img {
+    width:140px;
+    height:80px;
+    object-fit:cover;
+    margin:5px;
+    cursor:pointer;
+    opacity:0.6;
+    border:2px solid transparent;
+    transition:0.3s;
+}
+
+
+.gallery img:hover {
+    opacity:1;
+}
+
+
+.gallery img.active {
+    opacity:1;
+    border:3px solid white;
 }
 
 </style>
@@ -68,11 +85,15 @@ Terrors to Unveil: Intrusion
 
 
 <div class="main-image">
-    <button onclick="changeImage(-1)">❮</button>
+    <button class="arrow left" onclick="changeImage(-1)">❮</button>
+
+<button class="arrow right" onclick="changeImage(1)">❯</button>
 
     <img id="mainScreenshot" src="screenshot1.jpg">
 
-    <button onclick="changeImage(1)">❯</button>
+    <button class="arrow left" onclick="changeImage(-1)">❮</button>
+
+<button class="arrow right" onclick="changeImage(1)">❯</button>
 </div>
 
 <div class="gallery">
@@ -132,6 +153,29 @@ let images = [
 "screenshot11.jpg"
 ];
 
+
+.arrow {
+
+    background:rgba(255,255,255,0.15);
+    color:white;
+    border:none;
+    font-size:40px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:0.3s;
+
+}
+
+
+.arrow:hover {
+
+    background:white;
+    color:black;
+
+}
+    
 let current = 0;
 
 function setImage(index)
