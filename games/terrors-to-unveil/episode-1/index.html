@@ -23,10 +23,11 @@ margin:0;
 
 .container{
 
-width:1200px;
-max-width:90%;
-margin:0 auto;
+width:90%;
+max-width:1200px;
+margin:auto;
 padding-top:40px;
+padding-bottom:60px;
 
 }
 
@@ -35,14 +36,14 @@ padding-top:40px;
 h1{
 
 font-size:42px;
-margin-bottom:35px;
 text-align:center;
+margin-bottom:40px;
 
 }
 
 
 
-/* MAIN GALLERY */
+/* GALLERY */
 
 .gallery{
 
@@ -54,37 +55,37 @@ gap:35px;
 }
 
 
+
 .main-image{
 
-width:1000px;
-height:560px;
+width:850px;
+height:480px;
+
 object-fit:cover;
 
 }
 
 
 
-
 .arrow{
 
-width:55px;
-height:55px;
+width:60px;
+height:60px;
 
 border-radius:50%;
 
 background:#222;
 
-border:1px solid #777;
+border:1px solid #888;
 
 color:white;
 
-font-size:35px;
+font-size:38px;
 
 cursor:pointer;
 
-transition:0.2s;
-
 }
+
 
 
 .arrow:hover{
@@ -95,21 +96,24 @@ background:#444;
 
 
 
+
+
 /* THUMBNAILS */
+
 
 .thumbnails{
 
 display:flex;
 
-gap:15px;
+justify-content:center;
 
-margin-top:25px;
+gap:12px;
 
-width:1000px;
+margin:25px auto;
+
+width:850px;
 
 overflow-x:auto;
-
-padding-bottom:5px;
 
 }
 
@@ -125,32 +129,23 @@ position:relative;
 
 .thumb img{
 
-width:150px;
-height:85px;
+width:120px;
+
+height:70px;
 
 object-fit:cover;
 
-opacity:0.65;
+opacity:0.6;
 
 cursor:pointer;
 
 border:2px solid transparent;
 
-transition:0.2s;
-
 }
 
 
 
-
-.thumb:hover img{
-
-opacity:1;
-
-}
-
-
-
+.thumb:hover img,
 .thumb.active img{
 
 opacity:1;
@@ -161,7 +156,9 @@ border:2px solid white;
 
 
 
-/* WHITE OVERLAY */
+
+/* WHITE LINE UNDER IMAGE */
+
 
 .thumb.active::after{
 
@@ -170,11 +167,12 @@ content:"";
 position:absolute;
 
 bottom:0;
+
 left:0;
 
 width:100%;
 
-height:5px;
+height:4px;
 
 background:white;
 
@@ -184,11 +182,16 @@ background:white;
 
 
 
+/* TEXT */
+
+
 .description{
 
 width:1000px;
 
-margin:40px auto 0 auto;
+max-width:100%;
+
+margin:40px auto;
 
 }
 
@@ -196,13 +199,11 @@ margin:40px auto 0 auto;
 
 .description p{
 
-font-size:22px;
+font-size:20px;
 
 line-height:1.7;
 
 color:#ddd;
-
-max-width:1000px;
 
 }
 
@@ -210,7 +211,7 @@ max-width:1000px;
 
 h2{
 
-font-size:34px;
+font-size:32px;
 
 margin-top:45px;
 
@@ -219,54 +220,66 @@ margin-top:45px;
 
 
 
-.steam-button{
 
+/* BUTTONS */
+
+
+.buttons{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:15px;
+
+margin-top:40px;
+
+}
+
+
+
+.steam-button,
 .back-button{
 
-margin-top:20px;
+width:530px;
 
-padding:18px 40px;
+padding:20px;
+
+font-size:22px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+
+
+.steam-button{
+
+background:white;
+
+color:black;
+
+border:none;
+
+}
+
+
+
+.back-button{
 
 background:transparent;
 
 color:white;
 
-font-weight:bold;
-
-border:1px solid white;
-
-cursor:pointer;
-
-font-size:16px;
+border:2px solid white;
 
 }
 
-
-.back-button:hover{
-
-background:white;
-
-color:black;
-
-}  
-
-margin-top:35px;
-
-padding:18px 40px;
-
-background:white;
-
-color:black;
-
-font-weight:bold;
-
-border:none;
-
-cursor:pointer;
-
-font-size:16px;
-
-}
 
 
 
@@ -278,7 +291,18 @@ background:#ddd;
 
 
 
+.back-button:hover{
+
+background:white;
+
+color:black;
+
+}
+
+
+
 </style>
+
 
 </head>
 
@@ -290,23 +314,35 @@ background:#ddd;
 <div class="container">
 
 
-<h1>Terrors to Unveil: Intrusion</h1>
+
+<h1>
+Terrors to Unveil: Intrusion
+</h1>
+
 
 
 
 <div class="gallery">
 
 
-<button class="arrow" onclick="prev()">‹</button>
+<button class="arrow" onclick="prev()">
+‹
+</button>
+
 
 
 <img id="mainImage" class="main-image" src="screenshot1.jpg">
 
 
-<button class="arrow" onclick="next()">›</button>
+
+<button class="arrow" onclick="next()">
+›
+</button>
 
 
 </div>
+
+
 
 
 
@@ -318,48 +354,60 @@ background:#ddd;
 <img src="screenshot1.jpg" onclick="changeImage(0)">
 </div>
 
+
 <div class="thumb">
 <img src="screenshot2.jpg" onclick="changeImage(1)">
 </div>
+
 
 <div class="thumb">
 <img src="screenshot3.jpg" onclick="changeImage(2)">
 </div>
 
+
 <div class="thumb">
 <img src="screenshot4.jpg" onclick="changeImage(3)">
 </div>
+
 
 <div class="thumb">
 <img src="screenshot5.jpg" onclick="changeImage(4)">
 </div>
 
+
 <div class="thumb">
 <img src="screenshot6.jpg" onclick="changeImage(5)">
 </div>
+
 
 <div class="thumb">
 <img src="screenshot7.jpg" onclick="changeImage(6)">
 </div>
 
+
 <div class="thumb">
 <img src="screenshot8.jpg" onclick="changeImage(7)">
 </div>
+
 
 <div class="thumb">
 <img src="screenshot9.jpg" onclick="changeImage(8)">
 </div>
 
+
 <div class="thumb">
 <img src="screenshot10.jpg" onclick="changeImage(9)">
 </div>
+
 
 <div class="thumb">
 <img src="screenshot11.jpg" onclick="changeImage(10)">
 </div>
 
 
+
 </div>
+
 
 
 
@@ -368,19 +416,27 @@ background:#ddd;
 <div class="description">
 
 
+
 <p>
-The first chapter of the Terrors to Unveil series.
+
+The first chapter of the Terrors to Unveil series. 
 Explore a disturbing story where ordinary places hide something much darker.
+
 </p>
 
 
 
-<h2>About This Game</h2>
+
+<h2>
+About This Game
+</h2>
+
 
 
 <p>
 
 David Hopster, a 15-year-old high school student, has just been left home alone for the weekend while his parents head out of town.
+
 At first, everything seemed normal. He had no idea how quickly things would spiral.
 
 </p>
@@ -388,7 +444,10 @@ At first, everything seemed normal. He had no idea how quickly things would spir
 
 
 
+
 <div class="buttons">
+
+
 
 <button class="steam-button"
 onclick="window.open('https://store.steampowered.com/app/3716700/Terrors_to_Unveil__Intrusion/','_blank')">
@@ -398,6 +457,8 @@ VIEW ON STEAM
 </button>
 
 
+
+
 <button class="back-button"
 onclick="window.location.href='../index.html'">
 
@@ -405,13 +466,20 @@ OTHER EPISODES
 
 </button>
 
-</div>
 
 
 </div>
 
 
+
 </div>
+
+
+
+</div>
+
+
+
 
 
 
@@ -437,6 +505,7 @@ let images=[
 ];
 
 
+
 let current=0;
 
 
@@ -444,16 +513,25 @@ let thumbs=document.querySelectorAll(".thumb");
 
 
 
+
 function changeImage(index){
 
+
 current=index;
+
 
 document.getElementById("mainImage").src=images[index];
 
 
-thumbs.forEach(t=>t.classList.remove("active"));
+thumbs.forEach(t=>{
+
+t.classList.remove("active");
+
+});
+
 
 thumbs[index].classList.add("active");
+
 
 }
 
@@ -462,100 +540,44 @@ thumbs[index].classList.add("active");
 
 function next(){
 
+
 current++;
 
+
 if(current>=images.length)
+
 current=0;
+
 
 changeImage(current);
 
+
 }
+
 
 
 
 
 function prev(){
 
+
 current--;
 
+
 if(current<0)
+
 current=images.length-1;
 
 
 changeImage(current);
 
-}
-
-.buttons{
-
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:15px;
-margin-top:40px;
 
 }
 
 
-
-.steam-button,
-.back-button{
-
-width:530px;
-
-padding:20px;
-
-font-size:22px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-
-
-.steam-button{
-
-background:white;
-
-color:black;
-
-border:none;
-
-}
-
-
-
-.back-button{
-
-background:transparent;
-
-color:white;
-
-border:2px solid white;
-
-}
-
-
-
-.steam-button:hover{
-
-background:#ddd;
-
-}
-
-
-
-.back-button:hover{
-
-background:white;
-
-color:black;
-
-}
 
 </script>
+
 
 
 </body>
