@@ -2,276 +2,119 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Terrors to Unveil - Intrusion</title>
-
+<title>Terrors to Unveil: Intrusion</title>
 
 <style>
 
-
 body {
-
     background:#080808;
     color:white;
     font-family:Arial, Helvetica, sans-serif;
     margin:0;
-
 }
-
-
 
 .container {
-
-    width:92%;
-    margin:35px auto;
-
+    width:85%;
+    margin:auto;
+    padding-top:40px;
 }
-
 
 
 h1 {
-
-    font-size:38px;
-    margin-bottom:25px;
-
+    font-size:36px;
+    margin-bottom:30px;
 }
 
 
+/* MAIN SCREENSHOT */
 
-
-/* GALLERY AREA */
-
-
-.main-image {
-
+.gallery {
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:10px;
-
+    gap:25px;
 }
 
 
-
-.main-image img {
-
-    width:900px;
-    height:500px;
-
+.main-image {
+    width:800px;
+    height:450px;
     object-fit:cover;
-
 }
-
-
-
-
-/* ARROWS */
 
 
 .arrow {
-
-
-    width:65px;
-    height:65px;
-
-
+    width:45px;
+    height:45px;
     border-radius:50%;
-
-
-    background:rgba(255,255,255,0.15);
-
-
-    border:1px solid rgba(255,255,255,0.4);
-
-
+    background:#222;
     color:white;
-
-
-    font-size:40px;
-
-
+    border:1px solid #777;
+    font-size:28px;
     cursor:pointer;
-
-
-    transition:0.25s;
-
-
 }
-
-
-
-.arrow:hover {
-
-
-    background:white;
-
-    color:black;
-
-
-}
-
-
-
 
 
 /* THUMBNAILS */
 
-
-.gallery {
-
-
+.thumbnails {
     display:flex;
-
-    gap:8px;
-
-    margin-top:12px;
-
+    gap:12px;
+    margin-top:20px;
     overflow-x:auto;
-
-
 }
 
 
-
-
-.gallery img {
-
-
-    width:135px;
-
-    height:75px;
-
-
+.thumbnails img {
+    width:100px;
+    height:60px;
     object-fit:cover;
-
-
     cursor:pointer;
-
-
-    opacity:0.45;
-
-
-    border:3px solid transparent;
-
-
-    transition:0.25s;
-
-
+    opacity:0.6;
 }
 
 
-
-
-.gallery img:hover {
-
-
+.thumbnails img:hover,
+.thumbnails img.active {
     opacity:1;
-
-
+    border:2px solid white;
 }
-
-
-
-
-.gallery img.active {
-
-
-    opacity:1;
-
-
-    border:3px solid white;
-
-
-}
-
-
-
 
 
 
 /* TEXT */
 
-
 .description {
 
-
     margin-top:35px;
-
-
-    max-width:950px;
-
-
-    font-size:18px;
-
-
-    line-height:1.6;
-
+    max-width:900px;
 
 }
 
 
-
-.description h2 {
-
-
+h2 {
     margin-top:35px;
-
-
 }
 
 
+button {
 
-
-
-/* STEAM BUTTON */
-
-
-.steam {
-
-
-    display:inline-block;
-
-
-    margin-top:25px;
-
-
-    padding:15px 40px;
-
-
+    margin-top:30px;
+    padding:15px 30px;
     background:white;
-
-
     color:black;
-
-
-    text-decoration:none;
-
-
+    border:none;
     font-weight:bold;
-
-
-}
-
-
-
-.steam:hover {
-
-
-    background:#ddd;
-
+    cursor:pointer;
 
 }
-
-
 
 </style>
 
-
 </head>
-
 
 
 <body>
@@ -280,73 +123,43 @@ h1 {
 <div class="container">
 
 
-
-<h1>
-Terrors to Unveil: Intrusion
-</h1>
-
-
-
-
-<div class="main-image">
-
-
-
-<button class="arrow" onclick="changeImage(-1)">
-❮
-</button>
-
-
-
-<img id="mainScreenshot" src="screenshot1.jpg">
-
-
-
-<button class="arrow" onclick="changeImage(1)">
-❯
-</button>
-
-
-
-</div>
-
-
-
+<h1>Terrors to Unveil: Intrusion</h1>
 
 
 
 <div class="gallery">
 
 
-<img class="active" src="screenshot1.jpg" onclick="setImage(0)">
+<button class="arrow" onclick="previous()">‹</button>
 
-<img src="screenshot2.jpg" onclick="setImage(1)">
 
-<img src="screenshot3.jpg" onclick="setImage(2)">
+<img id="mainImage" class="main-image" src="screenshot1.jpg">
 
-<img src="screenshot4.jpg" onclick="setImage(3)">
 
-<img src="screenshot5.jpg" onclick="setImage(4)">
-
-<img src="screenshot6.jpg" onclick="setImage(5)">
-
-<img src="screenshot7.jpg" onclick="setImage(6)">
-
-<img src="screenshot8.jpg" onclick="setImage(7)">
-
-<img src="screenshot9.jpg" onclick="setImage(8)">
-
-<img src="screenshot10.jpg" onclick="setImage(9)">
-
-<img src="screenshot11.jpg" onclick="setImage(10)">
-
+<button class="arrow" onclick="next()">›</button>
 
 
 </div>
 
 
 
+<div class="thumbnails">
 
+
+<img src="screenshot1.jpg" onclick="changeImage(0)">
+<img src="screenshot2.jpg" onclick="changeImage(1)">
+<img src="screenshot3.jpg" onclick="changeImage(2)">
+<img src="screenshot4.jpg" onclick="changeImage(3)">
+<img src="screenshot5.jpg" onclick="changeImage(4)">
+<img src="screenshot6.jpg" onclick="changeImage(5)">
+<img src="screenshot7.jpg" onclick="changeImage(6)">
+<img src="screenshot8.jpg" onclick="changeImage(7)">
+<img src="screenshot9.jpg" onclick="changeImage(8)">
+<img src="screenshot10.jpg" onclick="changeImage(9)">
+<img src="screenshot11.jpg" onclick="changeImage(10)">
+
+
+</div>
 
 
 
@@ -354,47 +167,36 @@ Terrors to Unveil: Intrusion
 
 
 <p>
-
-Terrors to Unveil: Intrusion is the first chapter of an anthology horror series.
-
+The first chapter of the Terrors to Unveil series.
 Explore a disturbing story where ordinary places hide something much darker.
-
 </p>
 
 
 
-<h2>
-About the Game
-</h2>
-
+<h2>About This Game</h2>
 
 
 <p>
 
-Terrors to Unveil: Intrusion is a psychological horror experience focused on atmosphere, exploration and terrifying encounters.
-
-Discover hidden secrets, unsettling events and a story that slowly reveals the truth.
+David Hopster, a 15-year-old high school student, has just been left home alone for the weekend while his parents head out of town.
+At first, everything seemed normal. He had no idea how quickly things would spiral.
 
 </p>
 
 
 
-<a class="steam" href="STEAM_LINK_HERE" target="_blank">
+<button onclick="window.open('https://store.steampowered.com/app/3716700/Terrors_to_Unveil__Intrusion/','_blank')">
 
 VIEW ON STEAM
 
-</a>
+</button>
 
 
 
 </div>
 
 
-
-
-
 </div>
-
 
 
 
@@ -406,120 +208,65 @@ VIEW ON STEAM
 let images = [
 
 "screenshot1.jpg",
-
 "screenshot2.jpg",
-
 "screenshot3.jpg",
-
 "screenshot4.jpg",
-
 "screenshot5.jpg",
-
 "screenshot6.jpg",
-
 "screenshot7.jpg",
-
 "screenshot8.jpg",
-
 "screenshot9.jpg",
-
 "screenshot10.jpg",
-
 "screenshot11.jpg"
 
 ];
-
 
 
 let current = 0;
 
 
 
-
-function setImage(index){
-
+function changeImage(index){
 
 current=index;
 
-
-document.getElementById("mainScreenshot").src = images[current];
-
-
-updateActive();
-
+document.getElementById("mainImage").src=images[current];
 
 }
 
 
 
+function next(){
+
+current++;
+
+if(current>=images.length)
+current=0;
 
 
-function changeImage(direction){
-
-
-
-current += direction;
-
-
-
-if(current < 0)
-
-current = images.length-1;
-
-
-
-
-if(current >= images.length)
-
-current = 0;
-
-
-
-
-document.getElementById("mainScreenshot").src = images[current];
-
-
-updateActive();
-
+document.getElementById("mainImage").src=images[current];
 
 }
 
 
 
+function previous(){
+
+current--;
+
+if(current<0)
+current=images.length-1;
 
 
-
-
-function updateActive(){
-
-
-
-let thumbs=document.querySelectorAll(".gallery img");
-
-
-
-thumbs.forEach(function(img){
-
-img.classList.remove("active");
-
-});
-
-
-
-thumbs[current].classList.add("active");
-
-
+document.getElementById("mainImage").src=images[current];
 
 }
-
 
 
 </script>
 
 
 
-
 </body>
-
 
 </html>
