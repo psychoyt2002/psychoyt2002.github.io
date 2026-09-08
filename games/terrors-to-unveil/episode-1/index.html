@@ -36,6 +36,7 @@ h1{
 
 font-size:42px;
 margin-bottom:35px;
+text-align:center;
 
 }
 
@@ -47,8 +48,8 @@ margin-bottom:35px;
 
 display:flex;
 align-items:center;
-justify-content:flex-start;
-gap:25px;
+justify-content:center;
+gap:35px;
 
 }
 
@@ -185,10 +186,9 @@ background:white;
 
 .description{
 
-
 width:1000px;
 
-margin-top:40px;
+margin:40px auto 0 auto;
 
 }
 
@@ -388,21 +388,24 @@ At first, everything seemed normal. He had no idea how quickly things would spir
 
 
 
+<div class="buttons">
+
 <button class="steam-button"
 onclick="window.open('https://store.steampowered.com/app/3716700/Terrors_to_Unveil__Intrusion/','_blank')">
 
 VIEW ON STEAM
 
 </button>
-  
-<br><br>
+
 
 <button class="back-button"
 onclick="window.location.href='../index.html'">
 
-BACK TO SERIES
+OTHER EPISODES
 
 </button>
+
+</div>
 
 
 </div>
@@ -483,7 +486,74 @@ changeImage(current);
 
 }
 
+.buttons{
 
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+margin-top:40px;
+
+}
+
+
+
+.steam-button,
+.back-button{
+
+width:530px;
+
+padding:20px;
+
+font-size:22px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+
+.steam-button{
+
+background:white;
+
+color:black;
+
+border:none;
+
+}
+
+
+
+.back-button{
+
+background:transparent;
+
+color:white;
+
+border:2px solid white;
+
+}
+
+
+
+.steam-button:hover{
+
+background:#ddd;
+
+}
+
+
+
+.back-button:hover{
+
+background:white;
+
+color:black;
+
+}
 
 </script>
 
