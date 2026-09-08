@@ -2,70 +2,83 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Terrors to Unveil: Intrusion</title>
 
+
 <style>
 
-body {
-    background:#080808;
-    color:white;
-    font-family:Arial, Helvetica, sans-serif;
-}
+body{
 
-
-.container {
-    width:90%;
-    margin:auto;
-    padding-top:40px;
-}
-
-
-h1 {
-    font-size:38px;
-    margin-bottom:35px;
-}
-
-
-/* MAIN IMAGE AREA */
-
-.gallery {
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    gap:35px;
-}
-
-
-.main-image {
-
-    width:850px;
-    height:480px;
-    object-fit:cover;
+background:#080808;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
 
 }
 
 
-/* ARROWS */
+.container{
 
-.arrow {
+width:90%;
+margin:auto;
+padding-top:40px;
 
-    width:55px;
-    height:55px;
+}
 
-    border-radius:50%;
 
-    background:#222;
 
-    border:1px solid #aaa;
+h1{
 
-    color:white;
+font-size:38px;
+margin-bottom:35px;
 
-    font-size:35px;
+}
 
-    cursor:pointer;
+
+
+/* MAIN GALLERY */
+
+.gallery{
+
+display:flex;
+align-items:center;
+justify-content:flex-start;
+gap:25px;
+
+}
+
+
+.main-image{
+
+width:850px;
+height:480px;
+object-fit:cover;
+
+}
+
+
+
+
+.arrow{
+
+width:55px;
+height:55px;
+
+border-radius:50%;
+
+background:#222;
+
+border:1px solid #777;
+
+color:white;
+
+font-size:35px;
+
+cursor:pointer;
 
 }
 
@@ -73,101 +86,338 @@ h1 {
 
 /* THUMBNAILS */
 
-.thumbnails {
+.thumbnails{
 
-    display:flex;
+display:flex;
 
-    gap:12px;
+gap:12px;
 
-    margin-top:25px;
+margin-top:20px;
 
-    width:850px;
+width:850px;
 
-    overflow-x:auto;
-
-}
-
-
-.thumbnails img {
-
-    width:120px;
-
-    height:70px;
-
-    object-fit:cover;
-
-    cursor:pointer;
-
-    opacity:0.65;
-
-    border:2px solid transparent;
-
-}
-
-
-.thumbnails img:hover,
-.thumbnails img.active {
-
-    opacity:1;
-
-    border:2px solid white;
+overflow-x:auto;
 
 }
 
 
 
-/* TEXT */
+.thumb{
 
-.description {
-
-    width:850px;
-
-    margin-top:35px;
-
-}
-
-
-.description p {
-
-    font-size:18px;
-
-    line-height:1.6;
-
-    color:#ddd;
-
-}
-
-
-h2 {
-
-    font-size:26px;
-
-    margin-top:35px;
+position:relative;
 
 }
 
 
 
-/* BUTTON */
+.thumb img{
 
-button {
+width:120px;
+height:70px;
 
-    margin-top:30px;
+object-fit:cover;
 
-    padding:16px 35px;
+opacity:0.65;
 
-    background:white;
+cursor:pointer;
 
-    color:black;
-
-    border:none;
-
-    font-size:15px;
-
-    font-weight:bold;
-
-    cursor:pointer;
+border:2px solid transparent;
 
 }
+
+
+
+
+.thumb:hover img,
+.thumb.active img{
+
+opacity:1;
+
+border:2px solid white;
+
+}
+
+
+
+/* WHITE OVERLAY */
+
+.thumb.active::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:white;
+
+}
+
+
+
+
+
+.description{
+
+width:850px;
+
+margin-top:35px;
+
+}
+
+
+
+.description p{
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#ddd;
+
+}
+
+
+
+h2{
+
+font-size:28px;
+
+margin-top:35px;
+
+}
+
+
+
+
+.steam-button{
+
+margin-top:30px;
+
+padding:16px 35px;
+
+background:white;
+
+color:black;
+
+font-weight:bold;
+
+border:none;
+
+cursor:pointer;
+
+font-size:15px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>Terrors to Unveil: Intrusion</h1>
+
+
+
+<div class="gallery">
+
+
+<button class="arrow" onclick="prev()">‹</button>
+
+
+<img id="mainImage" class="main-image" src="screenshot1.jpg">
+
+
+<button class="arrow" onclick="next()">›</button>
+
+
+</div>
+
+
+
+
+<div class="thumbnails">
+
+
+<div class="thumb active">
+<img src="screenshot1.jpg" onclick="changeImage(0)">
+</div>
+
+<div class="thumb">
+<img src="screenshot2.jpg" onclick="changeImage(1)">
+</div>
+
+<div class="thumb">
+<img src="screenshot3.jpg" onclick="changeImage(2)">
+</div>
+
+<div class="thumb">
+<img src="screenshot4.jpg" onclick="changeImage(3)">
+</div>
+
+<div class="thumb">
+<img src="screenshot5.jpg" onclick="changeImage(4)">
+</div>
+
+<div class="thumb">
+<img src="screenshot6.jpg" onclick="changeImage(5)">
+</div>
+
+<div class="thumb">
+<img src="screenshot7.jpg" onclick="changeImage(6)">
+</div>
+
+<div class="thumb">
+<img src="screenshot8.jpg" onclick="changeImage(7)">
+</div>
+
+<div class="thumb">
+<img src="screenshot9.jpg" onclick="changeImage(8)">
+</div>
+
+<div class="thumb">
+<img src="screenshot10.jpg" onclick="changeImage(9)">
+</div>
+
+<div class="thumb">
+<img src="screenshot11.jpg" onclick="changeImage(10)">
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="description">
+
+
+<p>
+The first chapter of the Terrors to Unveil series.
+Explore a disturbing story where ordinary places hide something much darker.
+</p>
+
+
+
+<h2>About This Game</h2>
+
+
+<p>
+
+David Hopster, a 15-year-old high school student, has just been left home alone for the weekend while his parents head out of town.
+At first, everything seemed normal. He had no idea how quickly things would spiral.
+
+</p>
+
+
+
+
+<button class="steam-button"
+onclick="window.open('https://store.steampowered.com/app/3716700/Terrors_to_Unveil__Intrusion/','_blank')">
+
+VIEW ON STEAM
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+let images=[
+
+"screenshot1.jpg",
+"screenshot2.jpg",
+"screenshot3.jpg",
+"screenshot4.jpg",
+"screenshot5.jpg",
+"screenshot6.jpg",
+"screenshot7.jpg",
+"screenshot8.jpg",
+"screenshot9.jpg",
+"screenshot10.jpg",
+"screenshot11.jpg"
+
+];
+
+
+let current=0;
+
+
+let thumbs=document.querySelectorAll(".thumb");
+
+
+
+function changeImage(index){
+
+current=index;
+
+document.getElementById("mainImage").src=images[index];
+
+
+thumbs.forEach(t=>t.classList.remove("active"));
+
+thumbs[index].classList.add("active");
+
+}
+
+
+
+
+function next(){
+
+current++;
+
+if(current>=images.length)
+current=0;
+
+changeImage(current);
+
+}
+
+
+
+
+function prev(){
+
+current--;
+
+if(current<0)
+current=images.length-1;
+
+
+changeImage(current);
+
+}
+
+
+
+</script>
+
+
+</body>
 
 </html>
