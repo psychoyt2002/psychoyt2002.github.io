@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BrokenBirdz Games</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #080808;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            background:
+                radial-gradient(circle at center, #272727 0%, #080808 65%);
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+
+        .button:hover {
+            background: white;
+            color: black;
+        }
+
+        .games {
+            padding: 80px 8%;
+        }
+
+        .games h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .game-card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 35px;
+            max-width: 700px;
+        }
+
+        .game-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .game-card p {
+            color: #aaa;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 700px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        BROKENBIRDZ
+    </div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<section class="hero">
+
+    <h1>BROKENBIRDZ</h1>
+
+    <p>
+        Indie horror games.
+    </p>
+
+    <div class="buttons">
+
+        <a class="button" href="#games">
+            OUR GAMES
+        </a>
+
+        <a class="button" href="#">
+            STEAM
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="games" id="games">
+
+    <h2>Our Games</h2>
+
+    <div class="game-card">
+
+        <h3>Terrors to Unveil</h3>
+
+        <p>
+            A psychological horror experience where every night
+            hides something you were never supposed to discover.
+        </p>
+
+        <a class="button" href="#">
+            VIEW GAME
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 BrokenBirdz. All rights reserved.
+
+</footer>
+
+</body>
+</html>
