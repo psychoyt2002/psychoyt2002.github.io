@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Terrors to Unveil: Intrusion</title>
+<title>Terrors to Unveil - Intrusion</title>
 
 
 <style>
@@ -14,10 +14,10 @@
 
 body {
 
-background:#080808;
-color:white;
-font-family:Arial, Helvetica, sans-serif;
-margin:0;
+    background:#080808;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
 
 }
 
@@ -25,8 +25,8 @@ margin:0;
 
 .container {
 
-width:85%;
-margin:40px auto;
+    width:92%;
+    margin:35px auto;
 
 }
 
@@ -34,22 +34,23 @@ margin:40px auto;
 
 h1 {
 
-font-size:36px;
-margin-bottom:35px;
+    font-size:38px;
+    margin-bottom:25px;
 
 }
 
 
 
-/* MAIN GALLERY */
+
+/* GALLERY AREA */
 
 
 .main-image {
 
-display:flex;
-align-items:center;
-justify-content:center;
-gap:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
 
 }
 
@@ -57,11 +58,13 @@ gap:25px;
 
 .main-image img {
 
-width:750px;
-height:420px;
-object-fit:cover;
+    width:900px;
+    height:500px;
+
+    object-fit:cover;
 
 }
+
 
 
 
@@ -70,22 +73,31 @@ object-fit:cover;
 
 .arrow {
 
-width:55px;
-height:55px;
 
-border-radius:50%;
+    width:65px;
+    height:65px;
 
-background:#222;
 
-border:1px solid #555;
+    border-radius:50%;
 
-color:white;
 
-font-size:35px;
+    background:rgba(255,255,255,0.15);
 
-cursor:pointer;
 
-transition:0.3s;
+    border:1px solid rgba(255,255,255,0.4);
+
+
+    color:white;
+
+
+    font-size:40px;
+
+
+    cursor:pointer;
+
+
+    transition:0.25s;
+
 
 }
 
@@ -93,10 +105,14 @@ transition:0.3s;
 
 .arrow:hover {
 
-background:white;
-color:black;
+
+    background:white;
+
+    color:black;
+
 
 }
+
 
 
 
@@ -106,53 +122,72 @@ color:black;
 
 .gallery {
 
-display:flex;
 
-gap:10px;
+    display:flex;
 
-margin-top:20px;
+    gap:8px;
 
-overflow-x:auto;
+    margin-top:12px;
+
+    overflow-x:auto;
+
 
 }
+
 
 
 
 .gallery img {
 
-width:130px;
 
-height:75px;
+    width:135px;
 
-object-fit:cover;
+    height:75px;
 
-cursor:pointer;
 
-opacity:0.45;
+    object-fit:cover;
 
-border:3px solid transparent;
 
-transition:0.3s;
+    cursor:pointer;
+
+
+    opacity:0.45;
+
+
+    border:3px solid transparent;
+
+
+    transition:0.25s;
+
 
 }
+
 
 
 
 .gallery img:hover {
 
-opacity:1;
+
+    opacity:1;
+
 
 }
+
 
 
 
 .gallery img.active {
 
-opacity:1;
 
-border:3px solid white;
+    opacity:1;
+
+
+    border:3px solid white;
+
 
 }
+
+
 
 
 
@@ -162,13 +197,18 @@ border:3px solid white;
 
 .description {
 
-margin-top:35px;
 
-max-width:900px;
+    margin-top:35px;
 
-font-size:17px;
 
-line-height:1.6;
+    max-width:950px;
+
+
+    font-size:18px;
+
+
+    line-height:1.6;
+
 
 }
 
@@ -176,33 +216,42 @@ line-height:1.6;
 
 .description h2 {
 
-margin-top:35px;
+
+    margin-top:35px;
+
 
 }
 
 
 
 
-/* BUTTON */
+
+/* STEAM BUTTON */
 
 
 .steam {
 
-display:inline-block;
 
-margin-top:30px;
+    display:inline-block;
 
-background:white;
 
-color:black;
+    margin-top:25px;
 
-padding:14px 35px;
 
-font-weight:bold;
+    padding:15px 40px;
 
-text-decoration:none;
 
-transition:0.3s;
+    background:white;
+
+
+    color:black;
+
+
+    text-decoration:none;
+
+
+    font-weight:bold;
+
 
 }
 
@@ -210,7 +259,9 @@ transition:0.3s;
 
 .steam:hover {
 
-background:#ddd;
+
+    background:#ddd;
+
 
 }
 
@@ -229,23 +280,37 @@ background:#ddd;
 <div class="container">
 
 
-<h1>Terrors to Unveil: Intrusion</h1>
+
+<h1>
+Terrors to Unveil: Intrusion
+</h1>
+
 
 
 
 <div class="main-image">
 
 
-<button class="arrow" onclick="changeImage(-1)">❮</button>
+
+<button class="arrow" onclick="changeImage(-1)">
+❮
+</button>
+
 
 
 <img id="mainScreenshot" src="screenshot1.jpg">
 
 
-<button class="arrow" onclick="changeImage(1)">❯</button>
+
+<button class="arrow" onclick="changeImage(1)">
+❯
+</button>
+
 
 
 </div>
+
+
 
 
 
@@ -254,20 +319,32 @@ background:#ddd;
 
 
 <img class="active" src="screenshot1.jpg" onclick="setImage(0)">
+
 <img src="screenshot2.jpg" onclick="setImage(1)">
+
 <img src="screenshot3.jpg" onclick="setImage(2)">
+
 <img src="screenshot4.jpg" onclick="setImage(3)">
+
 <img src="screenshot5.jpg" onclick="setImage(4)">
+
 <img src="screenshot6.jpg" onclick="setImage(5)">
+
 <img src="screenshot7.jpg" onclick="setImage(6)">
+
 <img src="screenshot8.jpg" onclick="setImage(7)">
+
 <img src="screenshot9.jpg" onclick="setImage(8)">
+
 <img src="screenshot10.jpg" onclick="setImage(9)">
+
 <img src="screenshot11.jpg" onclick="setImage(10)">
 
 
 
 </div>
+
+
 
 
 
@@ -286,7 +363,10 @@ Explore a disturbing story where ordinary places hide something much darker.
 
 
 
-<h2>About the Game</h2>
+<h2>
+About the Game
+</h2>
+
 
 
 <p>
@@ -299,7 +379,7 @@ Discover hidden secrets, unsettling events and a story that slowly reveals the t
 
 
 
-<a class="steam" href="ΒΑΛΕ_ΕΔΩ_ΤΟ_STEAM_LINK" target="_blank">
+<a class="steam" href="STEAM_LINK_HERE" target="_blank">
 
 VIEW ON STEAM
 
@@ -308,6 +388,8 @@ VIEW ON STEAM
 
 
 </div>
+
+
 
 
 
@@ -324,15 +406,25 @@ VIEW ON STEAM
 let images = [
 
 "screenshot1.jpg",
+
 "screenshot2.jpg",
+
 "screenshot3.jpg",
+
 "screenshot4.jpg",
+
 "screenshot5.jpg",
+
 "screenshot6.jpg",
+
 "screenshot7.jpg",
+
 "screenshot8.jpg",
+
 "screenshot9.jpg",
+
 "screenshot10.jpg",
+
 "screenshot11.jpg"
 
 ];
@@ -340,6 +432,7 @@ let images = [
 
 
 let current = 0;
+
 
 
 
@@ -359,26 +452,27 @@ updateActive();
 
 
 
+
+
 function changeImage(direction){
+
 
 
 current += direction;
 
 
 
-if(current < 0){
+if(current < 0)
 
 current = images.length-1;
 
-}
 
 
 
-if(current >= images.length){
+if(current >= images.length)
 
 current = 0;
 
-}
 
 
 
@@ -393,13 +487,18 @@ updateActive();
 
 
 
+
+
+
 function updateActive(){
+
 
 
 let thumbs=document.querySelectorAll(".gallery img");
 
 
-thumbs.forEach(img=>{
+
+thumbs.forEach(function(img){
 
 img.classList.remove("active");
 
@@ -410,6 +509,7 @@ img.classList.remove("active");
 thumbs[current].classList.add("active");
 
 
+
 }
 
 
@@ -418,6 +518,8 @@ thumbs[current].classList.add("active");
 
 
 
+
 </body>
+
 
 </html>
