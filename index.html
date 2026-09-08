@@ -2,650 +2,812 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PsychoVerse</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+<title>PsychoVerse</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        html {
-            scroll-behavior: smooth;
-        }
+<style>
 
-        body {
-            margin: 0;
-            background: #050505;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 
-        /* =========================
-           NAVBAR
-        ========================= */
+html{
+    scroll-behavior:smooth;
+}
 
-        nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 90px;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+body{
 
-            padding: 0 7%;
+    background:#050505;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
 
-            z-index: 10;
+}
 
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(0,0,0,0.85),
-                    rgba(0,0,0,0)
-                );
-        }
 
-        .logo {
-            font-size: 25px;
-            font-weight: 800;
-            letter-spacing: 5px;
-        }
 
-        nav ul {
-            display: flex;
-            align-items: center;
-            gap: 40px;
+/* =====================
+        NAVBAR
+===================== */
 
-            list-style: none;
-        }
 
-        nav a {
-            color: #cfcfcf;
-            text-decoration: none;
+nav{
 
-            font-size: 15px;
-            letter-spacing: 1px;
+    position:absolute;
+    top:0;
+    left:0;
 
-            transition: 0.25s;
-        }
+    width:100%;
+    height:90px;
 
-        nav a:hover {
-            color: white;
-        }
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
+    padding:0 7%;
 
-        /* =========================
-           HERO
-        ========================= */
+    z-index:10;
 
-        .hero {
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.85),
+        transparent
+    );
 
-            min-height: 100vh;
+}
 
-            position: relative;
 
-            display: flex;
-            align-items: center;
+.logo{
 
-            padding: 140px 7% 100px;
+    font-size:25px;
+    font-weight:800;
 
-            background-image:
-                linear-gradient(
-                    to right,
-                    rgba(0,0,0,0.92) 0%,
-                    rgba(0,0,0,0.60) 40%,
-                    rgba(0,0,0,0.15) 75%
-                ),
+    letter-spacing:5px;
 
-                linear-gradient(
-                    to top,
-                    #050505 0%,
-                    rgba(5,5,5,0) 40%
-                ),
+}
 
-                url("hero.png");
 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
 
+nav ul{
 
-        .hero-content {
-            width: 650px;
-            max-width: 100%;
+    display:flex;
+    gap:40px;
 
-            position: relative;
-            z-index: 2;
-        }
+    list-style:none;
 
+}
 
-        .studio-label {
-            color: #aaa;
 
-            font-size: 13px;
-            font-weight: bold;
+nav a{
 
-            letter-spacing: 5px;
+    color:#aaa;
 
-            margin-bottom: 20px;
-        }
+    text-decoration:none;
 
+    font-size:15px;
 
-        .hero h1 {
-            font-size: clamp(50px, 6vw, 92px);
+    letter-spacing:1px;
 
-            line-height: 0.95;
+    transition:.3s;
 
-            letter-spacing: 3px;
+}
 
-            margin-bottom: 25px;
-        }
 
+nav a:hover{
 
-        .hero-description {
-            color: #c4c4c4;
+    color:white;
 
-            font-size: 18px;
-            line-height: 1.7;
+}
 
-            max-width: 550px;
 
-            margin-bottom: 35px;
-        }
 
+/* =====================
+        HERO
+===================== */
 
-        /* =========================
-           BUTTONS
-        ========================= */
 
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
+.hero{
 
-        .btn {
-            display: inline-flex;
+    min-height:100vh;
 
-            justify-content: center;
-            align-items: center;
+    display:flex;
+    align-items:center;
 
-            min-width: 150px;
+    padding:140px 7% 100px;
 
-            padding: 16px 27px;
 
-            text-decoration: none;
+    background-image:
 
-            font-size: 14px;
-            font-weight: bold;
 
-            letter-spacing: 1px;
+    linear-gradient(
+        to right,
+        rgba(0,0,0,.92),
+        rgba(0,0,0,.25)
+    ),
 
-            transition: all 0.25s ease;
-        }
 
+    linear-gradient(
+        to top,
+        #050505,
+        transparent 40%
+    ),
 
-        .btn-primary {
-            background: white;
-            color: black;
 
-            border: 1px solid white;
-        }
+    url("hero.png");
 
-        .btn-primary:hover {
-            background: #d9d9d9;
-        }
 
+    background-size:cover;
 
-        .btn-secondary {
-            background: rgba(0,0,0,0.35);
+    background-position:center;
 
-            color: white;
+}
 
-            border: 1px solid rgba(255,255,255,0.7);
-        }
 
-        .btn-secondary:hover {
-            background: white;
-            color: black;
-        }
 
+.hero-content{
 
-        /* =========================
-           GAMES SECTION
-        ========================= */
+    max-width:650px;
 
-        .games {
+}
 
-            padding: 100px 7% 130px;
 
-            background: #050505;
-        }
+.studio-label{
 
+    color:#aaa;
 
-        .section-label {
+    font-size:13px;
 
-            color: #777;
+    font-weight:bold;
 
-            font-size: 12px;
+    letter-spacing:5px;
 
-            font-weight: bold;
+    margin-bottom:20px;
 
-            letter-spacing: 5px;
+}
 
-            margin-bottom: 12px;
-        }
 
 
-        .games h2 {
+.hero h1{
 
-            font-size: 42px;
+    font-size:clamp(50px,6vw,92px);
 
-            margin-bottom: 45px;
-        }
+    line-height:.95;
 
+    letter-spacing:3px;
 
-        .game-card {
+    margin-bottom:25px;
 
-            max-width: 1100px;
+}
 
-            min-height: 400px;
 
-            border: 1px solid #242424;
 
-            display: flex;
+.hero-description{
 
-            align-items: flex-end;
+    color:#ccc;
 
-            position: relative;
+    font-size:18px;
 
-            overflow: hidden;
+    line-height:1.7;
 
-            background-image:
+    margin-bottom:35px;
 
-                linear-gradient(
-                    to right,
-                    rgba(0,0,0,0.93),
-                    rgba(0,0,0,0.45)
-                ),
+}
 
-                url("hero.png");
 
-            background-size: cover;
 
-            background-position: center;
-        }
+.hero-buttons{
 
+    display:flex;
 
-        .game-info {
+    gap:15px;
 
-            padding: 45px;
+}
 
-            max-width: 600px;
 
-            position: relative;
 
-            z-index: 2;
-        }
+.btn{
 
+    display:inline-flex;
 
-        .game-info h3 {
+    justify-content:center;
+    align-items:center;
 
-            font-size: 38px;
 
-            margin-bottom: 15px;
-        }
+    padding:16px 30px;
 
 
-        .game-info p {
+    text-decoration:none;
 
-            color: #aaa;
+    font-weight:bold;
 
-            font-size: 16px;
+    letter-spacing:1px;
 
-            line-height: 1.7;
+    transition:.25s;
 
-            margin-bottom: 28px;
-        }
+}
 
 
-        /* =========================
-           ABOUT
-        ========================= */
 
-        .about {
+.btn-primary{
 
-            padding: 110px 7%;
+    background:white;
 
-            background: #0a0a0a;
+    color:black;
 
-            border-top: 1px solid #161616;
+}
 
-            border-bottom: 1px solid #161616;
-        }
 
 
-        .about-content {
+.btn-primary:hover{
 
-            max-width: 750px;
-        }
+    background:#ccc;
 
+}
 
-        .about h2 {
 
-            font-size: 42px;
 
-            margin-bottom: 25px;
-        }
+.btn-secondary{
 
+    border:1px solid white;
 
-        .about p {
+    color:white;
 
-            color: #aaa;
+}
 
-            font-size: 17px;
 
-            line-height: 1.8;
-        }
 
+.btn-secondary:hover{
 
-        /* =========================
-           FOOTER
-        ========================= */
+    background:white;
 
-        footer {
+    color:black;
 
-            padding: 50px 7%;
+}
 
-            display: flex;
 
-            justify-content: space-between;
 
-            align-items: center;
+/* =====================
+        GAMES
+===================== */
 
-            gap: 20px;
 
-            color: #666;
+.games{
 
-            font-size: 14px;
-        }
+    padding:100px 7%;
 
+}
 
-        .footer-logo {
 
-            color: #aaa;
 
-            letter-spacing: 3px;
+.section-label{
 
-            font-weight: bold;
-        }
+    color:#777;
 
+    font-size:12px;
 
-        /* =========================
-           MOBILE
-        ========================= */
+    letter-spacing:5px;
 
-        @media (max-width: 750px) {
+    margin-bottom:15px;
 
-            nav {
+}
 
-                height: 75px;
 
-                padding: 0 5%;
-            }
 
-            .logo {
+.games h2{
 
-                font-size: 19px;
-            }
+    font-size:45px;
 
-            nav ul {
+    margin-bottom:50px;
 
-                display: none;
-            }
+}
 
-            .hero {
 
-                min-height: 800px;
 
-                padding: 130px 6% 80px;
+.games-grid{
 
-                align-items: flex-end;
+    display:grid;
 
-                background-position: 60% center;
+    grid-template-columns:repeat(3,1fr);
 
-                background-image:
+    gap:30px;
 
-                    linear-gradient(
-                        to top,
-                        #050505 0%,
-                        rgba(0,0,0,0.4) 55%,
-                        rgba(0,0,0,0.25) 100%
-                    ),
+}
 
-                    url("hero.png");
-            }
 
-            .hero h1 {
 
-                font-size: 48px;
-            }
+.game-card{
 
-            .hero-description {
+    min-height:430px;
 
-                font-size: 16px;
-            }
+    border:1px solid #242424;
 
-            .hero-buttons {
+    display:flex;
 
-                flex-direction: column;
-            }
+    align-items:flex-end;
 
-            .btn {
+    overflow:hidden;
 
-                width: 100%;
-            }
 
-            .games,
-            .about {
+    background-image:
 
-                padding-left: 6%;
-                padding-right: 6%;
-            }
 
-            .game-card {
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.25)
+    ),
 
-                min-height: 500px;
 
-                background-position: center;
-            }
+    url("hero.png");
 
-            .game-info {
 
-                padding: 30px;
-            }
+    background-size:cover;
 
-            .game-info h3 {
+    background-position:center;
 
-                font-size: 30px;
-            }
+}
 
-            footer {
 
-                flex-direction: column;
+.game-info{
 
-                align-items: flex-start;
-            }
-        }
+    padding:35px;
 
-    </style>
+}
+
+
+
+.game-info h3{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.game-info p{
+
+    color:#aaa;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* =====================
+        ABOUT
+===================== */
+
+
+.about{
+
+    padding:100px 7%;
+
+    background:#0a0a0a;
+
+    border-top:1px solid #161616;
+
+}
+
+
+
+.about h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.about p{
+
+    max-width:750px;
+
+    color:#aaa;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+
+
+
+/* =====================
+        FOOTER
+===================== */
+
+
+footer{
+
+    padding:50px 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#666;
+
+}
+
+
+
+.footer-logo{
+
+    color:#aaa;
+
+    letter-spacing:3px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+/* =====================
+        MOBILE
+===================== */
+
+
+@media(max-width:900px){
+
+
+    nav ul{
+
+        display:none;
+
+    }
+
+
+    .games-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    footer{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+}
+
+
+</style>
+
 
 </head>
+
 
 
 <body>
 
 
-    <!-- NAVIGATION -->
 
-    <nav>
+<nav>
 
-        <div class="logo">
-            PSYCHOVERSE
-        </div>
 
-        <ul>
+<div class="logo">
 
-            <li>
-                <a href="#">HOME</a>
-            </li>
+PSYCHOVERSE
 
-            <li>
-                <a href="#games">GAMES</a>
-            </li>
-
-            <li>
-                <a href="#about">ABOUT</a>
-            </li>
-
-            <li>
-                <a href="#contact">CONTACT</a>
-            </li>
-
-        </ul>
-
-    </nav>
+</div>
 
 
 
-    <!-- HERO -->
+<ul>
 
-    <section class="hero">
+<li><a href="#">HOME</a></li>
 
-        <div class="hero-content">
+<li><a href="#games">GAMES</a></li>
 
-            <div class="studio-label">
-                PSYCHOVERSE PRESENTS
-            </div>
+<li><a href="#about">ABOUT</a></li>
 
-            <h1>
-                TERRORS<br>
-                TO UNVEIL
-            </h1>
+<li><a href="#contact">CONTACT</a></li>
 
-            <p class="hero-description">
-                Step into unsettling stories where ordinary places
-                hide something far more disturbing beneath the surface.
-            </p>
+</ul>
 
 
-            <div class="hero-buttons">
-
-                <a href="#games" class="btn btn-primary">
-                    VIEW GAME
-                </a>
-
-                <a href="#" class="btn btn-secondary">
-                    VIEW ON STEAM
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
+</nav>
 
 
 
-    <!-- GAMES -->
 
-    <section class="games" id="games">
-
-        <div class="section-label">
-            PSYCHOVERSE
-        </div>
-
-        <h2>
-            Our Games
-        </h2>
+<section class="hero">
 
 
-        <div class="game-card">
+<div class="hero-content">
 
-            <div class="game-info">
 
-                <h3>
-                    Terrors to Unveil
-                </h3>
+<div class="studio-label">
 
-                <p>
-                    A psychological horror anthology focused on
-                    atmospheric environments, unsettling encounters
-                    and stories where nothing is quite what it seems.
-                </p>
+PSYCHOVERSE PRESENTS
 
-                <a href="#" class="btn btn-primary">
-                    VIEW GAME
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
+</div>
 
 
 
-    <!-- ABOUT -->
+<h1>
 
-    <section class="about" id="about">
+TERRORS<br>
 
-        <div class="about-content">
+TO UNVEIL
 
-            <div class="section-label">
-                THE STUDIO
-            </div>
-
-            <h2>
-                PsychoVerse
-            </h2>
-
-            <p>
-                PsychoVerse is an independent game studio creating
-                atmospheric horror experiences with a focus on
-                immersive environments, unsettling stories and
-                memorable moments.
-            </p>
-
-        </div>
-
-    </section>
+</h1>
 
 
 
-    <!-- FOOTER -->
+<p class="hero-description">
 
-    <footer id="contact">
+Step into unsettling stories where ordinary places hide something far more disturbing beneath the surface.
 
-        <div class="footer-logo">
-            PSYCHOVERSE
-        </div>
+</p>
 
-        <div>
-            © 2026 PsychoVerse. All rights reserved.
-        </div>
 
-    </footer>
+
+<div class="hero-buttons">
+
+
+<a href="#games" class="btn btn-primary">
+
+OUR GAMES
+
+</a>
+
+
+
+<a href="#" class="btn btn-secondary">
+
+STEAM
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="games" id="games">
+
+
+<div class="section-label">
+
+PSYCHOVERSE
+
+</div>
+
+
+<h2>
+
+Our Games
+
+</h2>
+
+
+
+<div class="games-grid">
+
+
+
+<div class="game-card">
+
+
+<div class="game-info">
+
+
+<h3>
+
+Terrors to Unveil
+
+</h3>
+
+
+<p>
+
+A psychological horror anthology series featuring multiple terrifying stories and unforgettable encounters.
+
+</p>
+
+
+
+<a href="games/terrors-to-unveil/index.html" class="btn btn-primary">
+
+VIEW SERIES
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="game-card">
+
+
+<div class="game-info">
+
+
+<h3>
+
+Morrow Creek Tales
+
+</h3>
+
+
+<p>
+
+A new horror universe filled with mysterious locations, dark secrets and disturbing stories.
+
+</p>
+
+
+
+<a href="games/morrow-creek-tales/index.html" class="btn btn-primary">
+
+VIEW SERIES
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="game-card">
+
+
+<div class="game-info">
+
+
+<h3>
+
+The Jester
+
+</h3>
+
+
+<p>
+
+A standalone horror experience where nothing is as it seems.
+
+</p>
+
+
+
+<a href="games/the-jester/index.html" class="btn btn-primary">
+
+VIEW GAME
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="about" id="about">
+
+
+<div>
+
+
+<div class="section-label">
+
+THE STUDIO
+
+</div>
+
+
+<h2>
+
+PsychoVerse
+
+</h2>
+
+
+
+<p>
+
+PsychoVerse is an independent game studio creating atmospheric horror experiences focused on immersive worlds, unsettling stories and memorable moments.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer id="contact">
+
+
+<div class="footer-logo">
+
+PSYCHOVERSE
+
+</div>
+
+
+<div>
+
+© 2026 PsychoVerse. All rights reserved.
+
+</div>
+
+
+</footer>
+
 
 
 </body>
