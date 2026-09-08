@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BrokenBirdz Games</title>
+    <title>PsychoVerse Games</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -26,6 +30,7 @@
             align-items: center;
             padding: 0 8%;
             border-bottom: 1px solid #222;
+            background: #080808;
         }
 
         .logo {
@@ -58,8 +63,13 @@
             align-items: center;
             text-align: center;
             padding: 40px;
+
             background:
-                radial-gradient(circle at center, #272727 0%, #080808 65%);
+                radial-gradient(
+                    circle at center,
+                    #272727 0%,
+                    #080808 65%
+                );
         }
 
         .hero h1 {
@@ -80,6 +90,7 @@
         }
 
         .button {
+            display: inline-block;
             padding: 15px 30px;
             border: 1px solid white;
             color: white;
@@ -120,6 +131,22 @@
             margin-bottom: 25px;
         }
 
+        .about {
+            padding: 80px 8%;
+            background: #0d0d0d;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            color: #aaa;
+            line-height: 1.8;
+        }
+
         footer {
             text-align: center;
             padding: 40px;
@@ -135,6 +162,11 @@
 
             .hero h1 {
                 font-size: 42px;
+                letter-spacing: 3px;
+            }
+
+            .hero p {
+                font-size: 17px;
             }
 
             .buttons {
@@ -147,72 +179,96 @@
 
 <body>
 
-<nav>
+    <nav>
 
-    <div class="logo">
-        BROKENBIRDZ
-    </div>
+        <div class="logo">
+            PSYCHOVERSE
+        </div>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#games">Games</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
 
-</nav>
+            <li>
+                <a href="#games">Games</a>
+            </li>
 
+            <li>
+                <a href="#about">About</a>
+            </li>
 
-<section class="hero">
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
 
-    <h1>BROKENBIRDZ</h1>
-
-    <p>
-        Indie horror games.
-    </p>
-
-    <div class="buttons">
-
-        <a class="button" href="#games">
-            OUR GAMES
-        </a>
-
-        <a class="button" href="#">
-            STEAM
-        </a>
-
-    </div>
-
-</section>
+    </nav>
 
 
-<section class="games" id="games">
+    <section class="hero">
 
-    <h2>Our Games</h2>
-
-    <div class="game-card">
-
-        <h3>Terrors to Unveil</h3>
+        <h1>PSYCHOVERSE</h1>
 
         <p>
-            A psychological horror experience where every night
-            hides something you were never supposed to discover.
+            Indie horror games.
         </p>
 
-        <a class="button" href="#">
-            VIEW GAME
-        </a>
+        <div class="buttons">
 
-    </div>
+            <a class="button" href="#games">
+                OUR GAMES
+            </a>
 
-</section>
+            <a class="button" href="#">
+                STEAM
+            </a>
+
+        </div>
+
+    </section>
 
 
-<footer>
+    <section class="games" id="games">
 
-    © 2026 BrokenBirdz. All rights reserved.
+        <h2>Our Games</h2>
 
-</footer>
+        <div class="game-card">
+
+            <h3>Terrors to Unveil</h3>
+
+            <p>
+                A psychological horror experience where every night
+                hides something you were never supposed to discover.
+            </p>
+
+            <a class="button" href="#">
+                VIEW GAME
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="about" id="about">
+
+        <h2>About PsychoVerse</h2>
+
+        <p>
+            PsychoVerse is an independent game studio focused on
+            atmospheric horror experiences, unsettling stories
+            and immersive worlds.
+        </p>
+
+    </section>
+
+
+    <footer id="contact">
+
+        © 2026 PsychoVerse. All rights reserved.
+
+    </footer>
 
 </body>
 </html>
