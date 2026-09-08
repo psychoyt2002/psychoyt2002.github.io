@@ -1,1 +1,551 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terrors to Unveil: Last Trace</title>
+
+<style>
+
+body{
+
+background:#080808;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+
+}
+
+
+.container{
+
+width:90%;
+max-width:1200px;
+margin:auto;
+padding-top:40px;
+padding-bottom:60px;
+
+}
+
+
+
+h1{
+
+font-size:42px;
+text-align:center;
+margin-bottom:40px;
+
+}
+
+
+
+/* GALLERY */
+
+.gallery{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:35px;
+
+}
+
+
+
+.main-image{
+
+width:850px;
+height:480px;
+
+object-fit:cover;
+
+}
+
+
+
+.arrow{
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+background:#222;
+
+border:1px solid #888;
+
+color:white;
+
+font-size:38px;
+
+cursor:pointer;
+
+}
+
+
+
+.arrow:hover{
+
+background:#444;
+
+}
+
+
+
+
+
+/* THUMBNAILS */
+
+
+.thumbnails{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+margin:25px auto;
+
+width:850px;
+
+overflow-x:auto;
+
+}
+
+
+
+.thumb{
+
+position:relative;
+
+}
+
+
+
+.thumb img{
+
+width:120px;
+
+height:70px;
+
+object-fit:cover;
+
+opacity:0.6;
+
+cursor:pointer;
+
+border:2px solid transparent;
+
+}
+
+
+
+.thumb:hover img,
+.thumb.active img{
+
+opacity:1;
+
+border:2px solid white;
+
+}
+
+
+
+
+/* WHITE LINE UNDER IMAGE */
+
+
+.thumb.active::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:white;
+
+}
+
+
+
+
+
+/* TEXT */
+
+
+.description{
+
+width:1000px;
+
+max-width:100%;
+
+margin:40px auto;
+
+}
+
+
+
+.description p{
+
+font-size:20px;
+
+line-height:1.7;
+
+color:#ddd;
+
+}
+
+
+
+h2{
+
+font-size:32px;
+
+margin-top:45px;
+
+}
+
+
+
+
+
+/* BUTTONS */
+
+
+.buttons{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:15px;
+
+margin-top:40px;
+
+}
+
+
+
+.steam-button,
+.back-button{
+
+width:530px;
+
+padding:20px;
+
+font-size:22px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+
+
+.steam-button{
+
+background:white;
+
+color:black;
+
+border:none;
+
+}
+
+
+
+.back-button{
+
+background:transparent;
+
+color:white;
+
+border:2px solid white;
+
+}
+
+
+
+
+.steam-button:hover{
+
+background:#ddd;
+
+}
+
+
+
+.back-button:hover{
+
+background:white;
+
+color:black;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+
+<h1>Terrors to Unveil: Last Trace
+</h1>
+
+
+
+
+<div class="gallery">
+
+
+<button class="arrow" onclick="prev()">
+‹
+</button>
+
+
+
+<img id="mainImage" class="main-image" src="screenshot22.jpg">
+
+<button class="arrow" onclick="next()">
+›
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="thumbnails">
+
+
+<div class="thumb active">
+<img src="screenshot22.jpg" onclick="changeImage(0)">
+</div>
+
+<div class="thumb">
+<img src="screenshot23.jpg" onclick="changeImage(1)">
+</div>
+
+<div class="thumb">
+<img src="screenshot24.jpg" onclick="changeImage(2)">
+</div>
+
+<div class="thumb">
+<img src="screenshot25.jpg" onclick="changeImage(3)">
+</div>
+
+<div class="thumb">
+<img src="screenshot26.jpg" onclick="changeImage(4)">
+</div>
+
+<div class="thumb">
+<img src="screenshot27.jpg" onclick="changeImage(5)">
+</div>
+
+<div class="thumb">
+<img src="screenshot28.jpg" onclick="changeImage(6)">
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="description">
+
+
+
+<p>
+The third chapter of the Terrors to Unveil series.
+Follow a new story filled with mystery, fear and unexpected discoveries.
+</p>
+
+
+
+
+<h2>
+About This Game
+</h2>
+
+
+
+<p>
+
+Jack Williams, a 26 year old hard-working man, is finally taking a day off after a long week at work.
+  
+He decides to spend his day off at his quiet cottage for a weekend of relaxation. Little did he know what would happen during his stay there.
+</p>
+
+
+
+
+
+<div class="buttons">
+
+
+
+<button class="steam-button"
+onclick="window.open('https://store.steampowered.com/app/4189490/Terrors_to_Unveil__Last_Trace/','_blank')">
+
+VIEW ON STEAM
+
+</button>
+
+
+
+
+<button class="back-button"
+onclick="window.location.href='../index.html'">
+
+OTHER EPISODES
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+let images=[
+
+"screenshot22.jpg",
+"screenshot23.jpg",
+"screenshot24.jpg",
+"screenshot25.jpg",
+"screenshot26.jpg",
+"screenshot27.jpg",
+"screenshot28.jpg",
+
+];
+
+
+
+let current=0;
+
+
+let thumbs=document.querySelectorAll(".thumb");
+
+
+
+
+function changeImage(index){
+
+
+current=index;
+
+
+document.getElementById("mainImage").src=images[index];
+
+
+thumbs.forEach(t=>{
+
+t.classList.remove("active");
+
+});
+
+
+thumbs[index].classList.add("active");
+
+
+}
+
+
+
+
+function next(){
+
+
+current++;
+
+
+if(current>=images.length)
+
+current=0;
+
+
+changeImage(current);
+
+
+}
+
+
+
+
+
+function prev(){
+
+
+current--;
+
+
+if(current<0)
+
+current=images.length-1;
+
+
+changeImage(current);
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
