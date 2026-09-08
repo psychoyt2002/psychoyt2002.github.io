@@ -67,8 +67,20 @@ Terrors to Unveil: Intrusion
 </h1>
 
 
-<img src="../intrusion.png">
+<div class="main-image">
+    <button onclick="changeImage(-1)">❮</button>
 
+    <img id="mainScreenshot" src="screenshot1.jpg">
+
+    <button onclick="changeImage(1)">❯</button>
+</div>
+
+<div class="gallery">
+    <img src="screenshot1.jpg" onclick="setImage(0)">
+    <img src="screenshot2.jpg" onclick="setImage(1)">
+    <img src="screenshot3.jpg" onclick="setImage(2)">
+    <img src="screenshot4.jpg" onclick="setImage(3)">
+</div>
 
 <p>
 The first chapter of the Terrors to Unveil series.
@@ -104,6 +116,45 @@ VIEW ON STEAM
 
 </div>
 
+<script>
+
+let images = [
+"screenshot1.jpg",
+"screenshot2.jpg",
+"screenshot3.jpg",
+"screenshot4.jpg",
+"screenshot5.jpg",
+"screenshot6.jpg",
+"screenshot7.jpg",
+"screenshot8.jpg",
+"screenshot9.jpg",
+"screenshot10.jpg",
+"screenshot11.jpg"
+];
+
+let current = 0;
+
+function setImage(index)
+{
+    current = index;
+    document.getElementById("mainScreenshot").src = images[current];
+}
+
+function changeImage(direction)
+{
+    current += direction;
+
+    if(current < 0)
+        current = images.length - 1;
+
+    if(current >= images.length)
+        current = 0;
+
+    document.getElementById("mainScreenshot").src = images[current];
+}
+
+</script>
+    
 </body>
 
 </html>
