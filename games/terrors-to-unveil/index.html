@@ -6,97 +6,92 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Terrors to Unveil | PsychoVerse</title>
+<title>PsychoVerse</title>
 
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 
 body{
 
-    background:#050505;
-    color:white;
-    font-family:Arial, Helvetica, sans-serif;
+background:#050505;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
 
 }
 
 
+/* NAV */
 
 nav{
 
-    height:90px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:0 7%;
-
-    border-bottom:1px solid #222;
+height:90px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 7%;
+border-bottom:1px solid #222;
 
 }
-
 
 
 .logo{
 
-    font-size:25px;
-    font-weight:bold;
-
-    letter-spacing:5px;
+font-size:25px;
+font-weight:bold;
+letter-spacing:5px;
 
 }
 
 
 nav a{
 
-    color:#aaa;
-    text-decoration:none;
-    font-size:16px;
+color:#aaa;
+text-decoration:none;
 
 }
 
+
+/* HERO */
 
 
 .hero{
 
-    min-height:600px;
+min-height:600px;
 
-    display:flex;
-    align-items:center;
+display:flex;
+align-items:center;
 
-    padding:80px 7%;
+padding:80px 7%;
+
+background:
+
+linear-gradient(
+to right,
+rgba(0,0,0,.9),
+rgba(0,0,0,.4)
+),
+
+url("../../hero.png");
 
 
-    background:
-
-    linear-gradient(
-        to right,
-        rgba(0,0,0,.9),
-        rgba(0,0,0,.4)
-    ),
-
-    url("../../hero.png");
-
-
-    background-size:cover;
-    background-position:center;
+background-size:cover;
+background-position:center;
 
 }
 
 
-
 .hero h1{
 
-    font-size:65px;
-    white-space:nowrap;
-    margin-bottom:20px;
+font-size:65px;
+white-space:nowrap;
+margin-bottom:20px;
 
 }
 
@@ -104,57 +99,78 @@ nav a{
 
 .hero p{
 
-    color:#aaa;
-
-    max-width:600px;
-
-    font-size:18px;
-
-    line-height:1.7;
+color:#aaa;
+max-width:600px;
+font-size:18px;
+line-height:1.7;
 
 }
 
+
+
+/* SECTION */
 
 
 .section{
 
-    padding:80px 7%;
+padding:80px 7%;
 
 }
-
 
 
 .section h2{
 
-    font-size:42px;
-
-    margin-bottom:40px;
+font-size:42px;
+margin-bottom:40px;
 
 }
 
 
+
+/* CARDS */
 
 
 .episodes{
 
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
 
 }
-
 
 
 
 .card{
 
-    background:#111;
+background:#111;
 
-    border:1px solid #222;
+border:1px solid #222;
 
-    padding:35px;
+padding:35px;
+
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:#555;
+
+}
+
+
+
+.card img{
+
+width:100%;
+
+margin-bottom:20px;
+
+cursor:pointer;
 
 }
 
@@ -162,9 +178,9 @@ nav a{
 
 .card h3{
 
-    font-size:28px;
+font-size:28px;
 
-    margin-bottom:15px;
+margin-bottom:15px;
 
 }
 
@@ -172,51 +188,29 @@ nav a{
 
 .card p{
 
-    color:#aaa;
+color:#aaa;
 
-    line-height:1.6;
+line-height:1.6;
 
-    margin-bottom:25px;
-
-}
-
-
-
-/* IMAGE CLICK */
-
-.card img{
-
-    width:100%;
-    margin-bottom:20px;
-    cursor:pointer;
-    transition:0.3s;
+margin-bottom:25px;
 
 }
-
-
-.card img:hover{
-
-    transform:scale(1.03);
-
-}
-
-
 
 
 
 .btn{
 
-    display:inline-block;
+display:inline-block;
 
-    padding:14px 25px;
+padding:14px 25px;
 
-    background:white;
+background:white;
 
-    color:black;
+color:black;
 
-    text-decoration:none;
+text-decoration:none;
 
-    font-weight:bold;
+font-weight:bold;
 
 }
 
@@ -224,40 +218,45 @@ nav a{
 
 .btn:hover{
 
-    background:#ccc;
+background:#ccc;
 
 }
 
+
+
+/* FOOTER */
 
 
 footer{
 
-    padding:40px 7%;
+padding:40px 7%;
 
-    border-top:1px solid #222;
+border-top:1px solid #222;
 
-    color:#666;
+color:#666;
 
 }
+
 
 
 
 @media(max-width:900px){
 
-    .episodes{
+.episodes{
 
-        grid-template-columns:1fr;
-
-    }
-
-
-    .hero h1{
-
-        font-size:45px;
-
-    }
+grid-template-columns:1fr;
 
 }
+
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+}
+
 
 
 </style>
@@ -269,11 +268,14 @@ footer{
 <body>
 
 
+
 <nav>
+
 
 <div class="logo">
 PSYCHOVERSE
 </div>
+
 
 
 <a href="../../index.html">
@@ -286,6 +288,7 @@ BACK TO HOME
 
 
 
+
 <section class="hero">
 
 
@@ -293,8 +296,11 @@ BACK TO HOME
 
 
 <h1>
+
 TERRORS TO UNVEIL
+
 </h1>
+
 
 
 <p>
@@ -315,14 +321,11 @@ and new horrors waiting to be discovered.
 
 
 
-
 <section class="section">
 
 
 <h2>
-
-Episodes
-
+Our Games
 </h2>
 
 
@@ -331,35 +334,39 @@ Episodes
 
 
 
+<!-- TERRORS TO UNVEIL -->
+
+
 <div class="card">
 
 
-<a href="episode-1/">
+<a href="terrors-to-unveil/">
 
-<img src="intrusion.png">
+<img src="terrors.png">
 
 </a>
 
 
+
 <h3>
-Episode 1
+Terrors to Unveil
 </h3>
 
 
 <p>
 
-The beginning of the Terrors to Unveil series.
-
-Discover the first terrifying story.
+A psychological horror anthology series featuring multiple terrifying stories and unforgettable encounters.
 
 </p>
 
 
-<a class="btn" href="https://store.steampowered.com/app/3716700/Terrors_to_Unveil__Intrusion/" target="_blank">
+
+<a class="btn" href="https://store.steampowered.com/curator/45547185" target="_blank">
 
 STEAM
 
 </a>
+
 
 
 </div>
@@ -368,36 +375,42 @@ STEAM
 
 
 
+<!-- MORROW CREEK -->
 
 
 <div class="card">
 
 
-<a href="episode-2/">
+<a href="morrow-creek-tales/">
 
-<img src="day-off.png">
+<img src="morrow.png">
 
 </a>
 
 
+
 <h3>
-Episode 2
+
+Morrow Creek Tales
+
 </h3>
 
 
 <p>
 
-Continue the journey with another disturbing
-horror experience.
+A new horror universe filled with mysterious locations, dark secrets and disturbing stories.
 
 </p>
 
 
-<a class="btn" href="https://store.steampowered.com/app/3587490/Terrors_to_Unveil__Day_Off/" target="_blank">
+
+
+<a class="btn" href="#" target="_blank">
 
 STEAM
 
 </a>
+
 
 
 </div>
@@ -406,39 +419,46 @@ STEAM
 
 
 
+<!-- THE JESTER -->
 
 
 <div class="card">
 
 
-<a href="episode-3/">
+<a href="the-jester/">
 
-<img src="last-trace.png">
+<img src="jester.png">
 
 </a>
 
 
+
 <h3>
-Episode 3
+
+The Jester
+
 </h3>
+
 
 
 <p>
 
-A new chapter filled with mystery,
-fear and unexpected encounters.
+A standalone horror experience where nothing is as it seems.
 
 </p>
 
 
-<a class="btn" href="https://store.steampowered.com/app/4189490/Terrors_to_Unveil__Last_Trace/" target="_blank">
+
+<a class="btn" href="#" target="_blank">
 
 STEAM
 
 </a>
 
 
+
 </div>
+
 
 
 
