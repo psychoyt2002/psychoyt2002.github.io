@@ -335,11 +335,11 @@ nav a:hover{
 
     overflow:hidden;
 
-    text-decoration:none;
-
-    color:white;
+    position:relative;
 
     transition:.3s;
+
+    cursor:pointer;
 
 }
 
@@ -658,6 +658,15 @@ Our Games
 
 <h3>
 
+<div class="game-card terrors-card"
+onclick="window.location.href='games/terrors-to-unveil/index.html'">
+
+
+<div class="game-info">
+
+
+<h3>
+
 Terrors to Unveil
 
 </h3>
@@ -671,13 +680,17 @@ A psychological horror anthology series featuring multiple terrifying stories an
 
 
 
-<a href="games/terrors-to-unveil/index.html" class="btn btn-primary">
+<a href="games/terrors-to-unveil/index.html" class="btn btn-primary" onclick="event.stopPropagation();">
 
 VIEW SERIES
 
+</a>
+
+
 </div>
 
-</a>
+
+</div>
 
 
 
