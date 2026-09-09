@@ -6,92 +6,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PsychoVerse</title>
+<title>Terrors to Unveil | PsychoVerse</title>
 
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
 body{
 
-background:#050505;
-color:white;
-font-family:Arial, Helvetica, sans-serif;
+    background:#050505;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
 
 }
 
 
-/* NAV */
 
 nav{
 
-height:90px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 7%;
-border-bottom:1px solid #222;
+    height:90px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 7%;
+
+    border-bottom:1px solid #222;
 
 }
+
 
 
 .logo{
 
-font-size:25px;
-font-weight:bold;
-letter-spacing:5px;
+    font-size:25px;
+    font-weight:bold;
+
+    letter-spacing:5px;
 
 }
 
 
 nav a{
 
-color:#aaa;
-text-decoration:none;
+    color:#aaa;
+    text-decoration:none;
 
 }
 
-
-/* HERO */
 
 
 .hero{
 
-min-height:600px;
+    min-height:600px;
 
-display:flex;
-align-items:center;
+    display:flex;
+    align-items:center;
 
-padding:80px 7%;
-
-background:
-
-linear-gradient(
-to right,
-rgba(0,0,0,.9),
-rgba(0,0,0,.4)
-),
-
-url("../../hero.png");
+    padding:80px 7%;
 
 
-background-size:cover;
-background-position:center;
+    background:
+
+    linear-gradient(
+        to right,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.4)
+    ),
+
+    url("../../hero.png");
+
+
+    background-size:cover;
+    background-position:center;
 
 }
 
 
+
 .hero h1{
 
-font-size:65px;
-white-space:nowrap;
-margin-bottom:20px;
+    font-size:70px;
+
+    margin-bottom:20px;
 
 }
 
@@ -99,78 +103,57 @@ margin-bottom:20px;
 
 .hero p{
 
-color:#aaa;
-max-width:600px;
-font-size:18px;
-line-height:1.7;
+    color:#aaa;
+
+    max-width:600px;
+
+    font-size:18px;
+
+    line-height:1.7;
 
 }
 
-
-
-/* SECTION */
 
 
 .section{
 
-padding:80px 7%;
+    padding:80px 7%;
 
 }
+
 
 
 .section h2{
 
-font-size:42px;
-margin-bottom:40px;
+    font-size:42px;
+
+    margin-bottom:40px;
 
 }
 
 
-
-/* CARDS */
 
 
 .episodes{
 
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
 
 }
+
 
 
 
 .card{
 
-background:#111;
+    background:#111;
 
-border:1px solid #222;
+    border:1px solid #222;
 
-padding:35px;
-
-transition:.3s;
-
-}
-
-
-
-.card:hover{
-
-transform:translateY(-8px);
-
-border-color:#555;
-
-}
-
-
-
-.card img{
-
-width:100%;
-
-margin-bottom:20px;
-
-cursor:pointer;
+    padding:35px;
 
 }
 
@@ -178,9 +161,9 @@ cursor:pointer;
 
 .card h3{
 
-font-size:28px;
+    font-size:28px;
 
-margin-bottom:15px;
+    margin-bottom:15px;
 
 }
 
@@ -188,29 +171,51 @@ margin-bottom:15px;
 
 .card p{
 
-color:#aaa;
+    color:#aaa;
 
-line-height:1.6;
+    line-height:1.6;
 
-margin-bottom:25px;
+    margin-bottom:25px;
 
 }
 
 
 
+/* IMAGE CLICK */
+
+.card img{
+
+    width:100%;
+    margin-bottom:20px;
+    cursor:pointer;
+    transition:0.3s;
+
+}
+
+
+.card img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+
 .btn{
 
-display:inline-block;
+    display:inline-block;
 
-padding:14px 25px;
+    padding:14px 25px;
 
-background:white;
+    background:white;
 
-color:black;
+    color:black;
 
-text-decoration:none;
+    text-decoration:none;
 
-font-weight:bold;
+    font-weight:bold;
 
 }
 
@@ -218,45 +223,40 @@ font-weight:bold;
 
 .btn:hover{
 
-background:#ccc;
+    background:#ccc;
 
 }
 
-
-
-/* FOOTER */
 
 
 footer{
 
-padding:40px 7%;
+    padding:40px 7%;
 
-border-top:1px solid #222;
+    border-top:1px solid #222;
 
-color:#666;
+    color:#666;
 
 }
-
 
 
 
 @media(max-width:900px){
 
-.episodes{
+    .episodes{
 
-grid-template-columns:1fr;
+        grid-template-columns:1fr;
+
+    }
+
+
+    .hero h1{
+
+        font-size:45px;
+
+    }
 
 }
-
-
-.hero h1{
-
-font-size:45px;
-
-}
-
-}
-
 
 
 </style>
@@ -268,14 +268,11 @@ font-size:45px;
 <body>
 
 
-
 <nav>
-
 
 <div class="logo">
 PSYCHOVERSE
 </div>
-
 
 
 <a href="../../index.html">
@@ -288,7 +285,6 @@ BACK TO HOME
 
 
 
-
 <section class="hero">
 
 
@@ -297,10 +293,10 @@ BACK TO HOME
 
 <h1>
 
-TERRORS TO UNVEIL
+TERRORS<br>
+TO UNVEIL
 
 </h1>
-
 
 
 <p>
@@ -321,11 +317,14 @@ and new horrors waiting to be discovered.
 
 
 
+
 <section class="section">
 
 
 <h2>
-Our Games
+
+Episodes
+
 </h2>
 
 
@@ -334,39 +333,35 @@ Our Games
 
 
 
-<!-- TERRORS TO UNVEIL -->
-
-
 <div class="card">
 
 
-<a href="terrors-to-unveil/">
+<a href="episode-1/">
 
-<img src="terrors.png">
+<img src="intrusion.png">
 
 </a>
 
 
-
 <h3>
-Terrors to Unveil
+Episode 1
 </h3>
 
 
 <p>
 
-A psychological horror anthology series featuring multiple terrifying stories and unforgettable encounters.
+The beginning of the Terrors to Unveil series.
+
+Discover the first terrifying story.
 
 </p>
 
 
-
-<a class="btn" href="https://store.steampowered.com/curator/45547185" target="_blank">
+<a class="btn" href="https://store.steampowered.com/app/3716700/Terrors_to_Unveil__Intrusion/" target="_blank">
 
 STEAM
 
 </a>
-
 
 
 </div>
@@ -375,42 +370,36 @@ STEAM
 
 
 
-<!-- MORROW CREEK -->
 
 
 <div class="card">
 
 
-<a href="morrow-creek-tales/">
+<a href="episode-2/">
 
-<img src="morrow.png">
+<img src="day-off.png">
 
 </a>
 
 
-
 <h3>
-
-Morrow Creek Tales
-
+Episode 2
 </h3>
 
 
 <p>
 
-A new horror universe filled with mysterious locations, dark secrets and disturbing stories.
+Continue the journey with another disturbing
+horror experience.
 
 </p>
 
 
-
-
-<a class="btn" href="#" target="_blank">
+<a class="btn" href="https://store.steampowered.com/app/3587490/Terrors_to_Unveil__Day_Off/" target="_blank">
 
 STEAM
 
 </a>
-
 
 
 </div>
@@ -419,46 +408,39 @@ STEAM
 
 
 
-<!-- THE JESTER -->
 
 
 <div class="card">
 
 
-<a href="the-jester/">
+<a href="episode-3/">
 
-<img src="jester.png">
+<img src="last-trace.png">
 
 </a>
 
 
-
 <h3>
-
-The Jester
-
+Episode 3
 </h3>
-
 
 
 <p>
 
-A standalone horror experience where nothing is as it seems.
+A new chapter filled with mystery,
+fear and unexpected encounters.
 
 </p>
 
 
-
-<a class="btn" href="#" target="_blank">
+<a class="btn" href="https://store.steampowered.com/app/4189490/Terrors_to_Unveil__Last_Trace/" target="_blank">
 
 STEAM
 
 </a>
 
 
-
 </div>
-
 
 
 
