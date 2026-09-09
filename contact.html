@@ -11,6 +11,7 @@
 
 <style>
 
+
 *{
     margin:0;
     padding:0;
@@ -18,36 +19,116 @@
 }
 
 
+
 body{
 
-    background:#111;
+    background:#050505;
     color:white;
     font-family:Arial, Helvetica, sans-serif;
 
 }
 
 
-.contact{
 
-    min-height:100vh;
 
-    padding:100px 12%;
+/* NAVBAR */
+
+
+nav{
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 7%;
+
+    border-bottom:1px solid #222;
 
 }
 
 
-h1{
+
+.logo{
+
+    font-size:25px;
+
+    font-weight:800;
+
+    letter-spacing:5px;
+
+}
+
+
+
+
+nav ul{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+
+
+nav a{
+
+    color:#aaa;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:white;
+
+}
+
+
+
+
+
+/* CONTACT */
+
+
+.contact{
+
+    min-height:calc(100vh - 90px);
+
+    padding:80px 12%;
+
+}
+
+
+
+.contact h1{
 
     text-align:center;
 
     font-size:55px;
 
-    margin-bottom:40px;
+    margin-bottom:30px;
 
 }
 
 
-p{
+
+.contact p{
 
     text-align:center;
 
@@ -58,6 +139,7 @@ p{
     margin-bottom:40px;
 
 }
+
 
 
 
@@ -74,6 +156,7 @@ form{
 input,
 textarea{
 
+
     width:100%;
 
     background:#222;
@@ -82,7 +165,7 @@ textarea{
 
     border-bottom:4px solid white;
 
-    padding:20px;
+    padding:18px;
 
     margin-bottom:25px;
 
@@ -91,6 +174,16 @@ textarea{
     font-size:16px;
 
 }
+
+
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#aaa;
+
+}
+
 
 
 
@@ -106,23 +199,25 @@ textarea{
 
 button{
 
+
     width:100%;
 
     padding:18px;
 
     background:transparent;
 
-    color:white;
-
     border:1px solid white;
+
+    color:white;
 
     font-weight:bold;
 
-    font-size:16px;
+    letter-spacing:2px;
 
     cursor:pointer;
 
 }
+
 
 
 button:hover{
@@ -134,21 +229,100 @@ button:hover{
 }
 
 
+
+
+@media(max-width:900px){
+
+
+nav ul{
+
+    display:none;
+
+}
+
+
+
+.contact h1{
+
+    font-size:40px;
+
+}
+
+
+}
+
+
+
 </style>
 
 
 </head>
 
 
+
 <body>
+
+
+
+<nav>
+
+
+<div class="logo">
+
+PSYCHOVERSE
+
+</div>
+
+
+
+<ul>
+
+<li>
+<a href="index.html">
+HOME
+</a>
+</li>
+
+
+<li>
+<a href="index.html#games">
+GAMES
+</a>
+</li>
+
+
+<li>
+<a href="index.html#about">
+ABOUT
+</a>
+</li>
+
+
+<li>
+<a href="contact.html">
+CONTACT
+</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
 
 
 <section class="contact">
 
 
+
 <h1>
 CONTACT US
 </h1>
+
 
 
 <p>
@@ -157,34 +331,55 @@ Contact us, be clear and objective. We will respond as soon as possible.
 
 
 
+
 <form action="https://formspree.io/f/xvkodrob" method="POST">
 
 
-<input 
-type="text" 
-name="name" 
+
+<input
+
+type="text"
+
+name="name"
+
 placeholder="Name*"
+
 required>
 
 
-<input 
-type="email" 
-name="email" 
+
+<input
+
+type="email"
+
+name="email"
+
 placeholder="Email*"
+
 required>
 
 
-<input 
-type="text" 
-name="subject" 
+
+<input
+
+type="text"
+
+name="subject"
+
 placeholder="Subject*"
+
 required>
 
 
-<textarea 
-name="message" 
+
+<textarea
+
+name="message"
+
 placeholder="Message*"
+
 required></textarea>
+
 
 
 
@@ -195,11 +390,13 @@ SEND
 </button>
 
 
+
 </form>
 
 
 
 </section>
+
 
 
 
