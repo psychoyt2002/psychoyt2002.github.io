@@ -459,9 +459,23 @@ nav a:hover{
 }
 
 
+.about-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+
+
 .about-content{
 
-    max-width:850px;
+    max-width:650px;
 
 }
 
@@ -471,7 +485,21 @@ nav a:hover{
 
     font-size:50px;
 
+    margin-bottom:10px;
+
+}
+
+
+
+.about h3{
+
+    color:#aaa;
+
+    font-size:20px;
+
     margin-bottom:30px;
+
+    font-weight:normal;
 
 }
 
@@ -484,6 +512,42 @@ nav a:hover{
     font-size:18px;
 
     line-height:1.9;
+
+}
+
+
+
+.about-image img{
+
+    width:400px;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border:1px solid #222;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.about-container{
+
+    flex-direction:column;
+
+}
+
+
+.about-image img{
+
+    width:100%;
+
+    height:auto;
+
+}
 
 }
 
@@ -789,6 +853,9 @@ VIEW GAME
 <section class="about" id="about">
 
 
+<div class="about-container">
+
+
 <div class="about-content">
 
 
@@ -798,21 +865,36 @@ ABOUT THE CREATOR
 
 
 <h2>
-PsychoVerse
+Dionisis Papadimitropoulos
 </h2>
+
+
+<h3>
+Founder of PsychoVerse
+</h3>
 
 
 <p>
 
-My name is Dionisis Papadimitropoulos, an independent game developer from Greece.
+I am an independent game developer from Greece and the creator behind PsychoVerse.
 
-I am the creator behind PsychoVerse, a studio focused on creating atmospheric horror experiences, immersive worlds and memorable stories.
+After graduating from AKTO College with a degree in Game Design, I started creating horror experiences focused on atmosphere, storytelling and immersive worlds.
 
-I graduated from AKTO College with a degree in Game Design, where I developed my passion for game development, storytelling and creating unique interactive experiences.
-
-Through PsychoVerse, my goal is to create horror games that leave a lasting impression on players.
+Through PsychoVerse, my goal is to create memorable games that leave a lasting impression on players.
 
 </p>
+
+
+</div>
+
+
+
+<div class="about-image">
+
+<img src="about.png">
+
+</div>
+
 
 
 </div>
