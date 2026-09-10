@@ -9,7 +9,13 @@
 <title>PsychoVerse</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
+
+
+/* =====================
+        GLOBAL
+===================== */
 
 *{
     margin:0;
@@ -24,23 +30,21 @@ html{
 
 
 body{
-
     background:#050505;
     color:white;
     font-family:Arial, Helvetica, sans-serif;
-
+    overflow-x:hidden;
 }
-
 
 
 /* =====================
         NAVBAR
 ===================== */
 
-
 nav{
 
     position:absolute;
+
     top:0;
     left:0;
 
@@ -48,6 +52,7 @@ nav{
     height:90px;
 
     display:flex;
+
     justify-content:space-between;
     align-items:center;
 
@@ -68,18 +73,22 @@ nav{
 .logo{
 
     font-size:25px;
+
     font-weight:800;
+
     letter-spacing:5px;
+
     color:white;
+
     text-decoration:none;
 
 }
 
 
-
 nav ul{
 
     display:flex;
+
     gap:40px;
 
     list-style:none;
@@ -109,24 +118,21 @@ nav a:hover{
 }
 
 
-
 /* =====================
         HERO
 ===================== */
-
 
 .hero{
 
     min-height:100vh;
 
     display:flex;
+
     align-items:center;
 
     padding:140px 7% 100px;
 
-
     background-image:
-
 
     linear-gradient(
         to right,
@@ -134,23 +140,19 @@ nav a:hover{
         rgba(0,0,0,.25)
     ),
 
-
     linear-gradient(
         to top,
         #050505,
         transparent 40%
     ),
 
-
     url("hero.png");
-
 
     background-size:cover;
 
     background-position:center;
 
 }
-
 
 
 .hero-content{
@@ -175,8 +177,8 @@ nav a:hover{
 }
 
 
-
 .hero h1{
+
     font-size:clamp(45px,5vw,75px);
 
     line-height:.95;
@@ -186,7 +188,6 @@ nav a:hover{
     margin-bottom:25px;
 
 }
-
 
 
 .hero-description{
@@ -202,7 +203,6 @@ nav a:hover{
 }
 
 
-
 .hero-buttons{
 
     display:flex;
@@ -212,17 +212,15 @@ nav a:hover{
 }
 
 
-
 .btn{
 
     display:inline-flex;
 
     justify-content:center;
+
     align-items:center;
 
-
     padding:16px 30px;
-
 
     text-decoration:none;
 
@@ -235,7 +233,6 @@ nav a:hover{
 }
 
 
-
 .btn-primary{
 
     background:white;
@@ -245,13 +242,11 @@ nav a:hover{
 }
 
 
-
 .btn-primary:hover{
 
     background:#ccc;
 
 }
-
 
 
 .btn-secondary{
@@ -263,7 +258,6 @@ nav a:hover{
 }
 
 
-
 .btn-secondary:hover{
 
     background:white;
@@ -273,18 +267,15 @@ nav a:hover{
 }
 
 
-
 /* =====================
         GAMES
 ===================== */
-
 
 .games{
 
     padding:100px 7%;
 
 }
-
 
 
 .section-label{
@@ -300,7 +291,6 @@ nav a:hover{
 }
 
 
-
 .games h2{
 
     font-size:45px;
@@ -308,7 +298,6 @@ nav a:hover{
     margin-bottom:50px;
 
 }
-
 
 
 .games-grid{
@@ -320,7 +309,6 @@ nav a:hover{
     gap:30px;
 
 }
-
 
 
 .game-card{
@@ -355,7 +343,6 @@ nav a:hover{
 }
 
 
-
 .terrors-card{
 
     background-image:
@@ -368,12 +355,12 @@ nav a:hover{
 
     url("terrors-cover.png");
 
-
     background-size:cover;
 
     background-position:center;
 
 }
+
 
 .morrow-card{
 
@@ -388,10 +375,10 @@ nav a:hover{
     url("morrow-cover.png");
 
     background-size:cover;
+
     background-position:center;
 
 }
-
 
 
 .jester-card{
@@ -407,16 +394,17 @@ nav a:hover{
     url("jester-cover.png");
 
     background-size:cover;
+
     background-position:center;
 
-}    
+}
+
 
 .game-info{
 
     padding:35px;
 
 }
-
 
 
 .game-info h3{
@@ -428,11 +416,10 @@ nav a:hover{
 }
 
 
-
 .game-info p{
 
     color:white;
-    
+
     line-height:1.6;
 
     margin-bottom:25px;
@@ -440,13 +427,9 @@ nav a:hover{
 }
 
 
-
-
-
 /* =====================
         ABOUT
 ===================== */
-
 
 .about{
 
@@ -472,13 +455,11 @@ nav a:hover{
 }
 
 
-
 .about-content{
 
     max-width:650px;
 
 }
-
 
 
 .about h2{
@@ -488,7 +469,6 @@ nav a:hover{
     margin-bottom:10px;
 
 }
-
 
 
 .about h3{
@@ -504,7 +484,6 @@ nav a:hover{
 }
 
 
-
 .about p{
 
     color:#aaa;
@@ -515,6 +494,14 @@ nav a:hover{
 
 }
 
+
+.about-image{
+
+    text-align:center;
+
+    flex-shrink:0;
+
+}
 
 
 .about-image img{
@@ -530,12 +517,9 @@ nav a:hover{
 }
 
 
-.about-image{
-
-    text-align:center;
-
-}
-
+/* =====================
+        SOCIAL LINKS
+===================== */
 
 .social-links{
 
@@ -555,11 +539,13 @@ nav a:hover{
 .social-links a{
 
     width:50px;
+
     height:50px;
 
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     color:#aaa;
@@ -577,13 +563,11 @@ nav a:hover{
 }
 
 
-
 .social-links a:hover{
 
     transform:translateY(-6px);
 
 }
-
 
 
 /* INSTAGRAM */
@@ -599,7 +583,6 @@ nav a:hover{
 }
 
 
-
 /* X */
 
 .social-links a:nth-child(2):hover{
@@ -611,7 +594,6 @@ nav a:hover{
     box-shadow:0 0 15px white;
 
 }
-
 
 
 /* STEAM */
@@ -627,7 +609,6 @@ nav a:hover{
 }
 
 
-
 /* DISCORD */
 
 .social-links a:nth-child(4):hover{
@@ -641,9 +622,6 @@ nav a:hover{
 }
 
 
-
-
-
 /* =====================
         ABOUT ANIMATION
 ===================== */
@@ -655,7 +633,9 @@ nav a:hover{
     transform:translateX(-70px);
 
     transition:
+
         opacity 0.9s ease,
+
         transform 0.9s ease;
 
 }
@@ -668,7 +648,9 @@ nav a:hover{
     transform:translateX(70px);
 
     transition:
+
         opacity 0.9s ease,
+
         transform 0.9s ease;
 
 }
@@ -699,7 +681,9 @@ nav a:hover{
     transform:translateY(20px);
 
     transition:
+
         opacity 0.8s ease 0.5s,
+
         transform 0.8s ease 0.5s;
 
 }
@@ -714,11 +698,9 @@ nav a:hover{
 }
 
 
-
 /* =====================
         FOOTER
 ===================== */
-
 
 footer{
 
@@ -733,7 +715,6 @@ footer{
 }
 
 
-
 .footer-logo{
 
     color:#aaa;
@@ -745,14 +726,44 @@ footer{
 }
 
 
-
-
 /* =====================
         MOBILE
 ===================== */
 
-
 @media(max-width:900px){
+
+    html,
+    body{
+
+        width:100%;
+
+        max-width:100%;
+
+        overflow-x:hidden;
+
+    }
+
+
+    nav{
+
+        position:absolute;
+
+        width:100%;
+
+        height:75px;
+
+        padding:0 25px;
+
+    }
+
+
+    .logo{
+
+        font-size:20px;
+
+        letter-spacing:4px;
+
+    }
 
 
     nav ul{
@@ -762,28 +773,273 @@ footer{
     }
 
 
-    .games-grid{
+    /* HERO */
 
-        grid-template-columns:1fr;
+    .hero{
+
+        width:100%;
+
+        min-height:100vh;
+
+        padding:120px 25px 70px;
+
+        background-position:center;
+
+    }
+
+
+    .hero-content{
+
+        width:100%;
+
+        max-width:100%;
+
+    }
+
+
+    .studio-label{
+
+        font-size:11px;
+
+        letter-spacing:4px;
+
+        margin-bottom:18px;
 
     }
 
 
     .hero h1{
 
-        font-size:48px;
+        font-size:clamp(40px,12vw,58px);
+
+        line-height:1;
+
+        letter-spacing:1px;
+
+        margin-bottom:25px;
+
+        max-width:100%;
+
+        overflow-wrap:anywhere;
+
+    }
+
+
+    .hero-description{
+
+        font-size:17px;
+
+        line-height:1.6;
+
+        max-width:100%;
+
+        margin-bottom:30px;
 
     }
 
 
     .hero-buttons{
 
+        width:100%;
+
         flex-direction:column;
+
+        gap:12px;
 
     }
 
 
+    .hero-buttons .btn{
+
+        width:100%;
+
+        padding:16px 20px;
+
+        text-align:center;
+
+    }
+
+
+    /* GAMES */
+
+    .games{
+
+        width:100%;
+
+        padding:80px 25px;
+
+    }
+
+
+    .games h2{
+
+        font-size:42px;
+
+        line-height:1.1;
+
+        margin-bottom:40px;
+
+    }
+
+
+    .games-grid{
+
+        width:100%;
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+
+    .game-card{
+
+        width:100%;
+
+        min-height:430px;
+
+    }
+
+
+    .game-info{
+
+        padding:25px;
+
+    }
+
+
+    .game-info h3{
+
+        font-size:28px;
+
+    }
+
+
+    .game-info p{
+
+        font-size:16px;
+
+        line-height:1.6;
+
+    }
+
+
+    /* ABOUT */
+
+    .about{
+
+        width:100%;
+
+        padding:80px 25px;
+
+    }
+
+
+    .about-container{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:50px;
+
+    }
+
+
+    .about-content{
+
+        width:100%;
+
+        max-width:100%;
+
+    }
+
+
+    .about h2{
+
+        font-size:42px;
+
+        line-height:1.05;
+
+        overflow-wrap:anywhere;
+
+    }
+
+
+    .about h3{
+
+        font-size:20px;
+
+        line-height:1.4;
+
+    }
+
+
+    .about p{
+
+        width:100%;
+
+        font-size:17px;
+
+        line-height:1.8;
+
+        overflow-wrap:break-word;
+
+    }
+
+
+    .about-image{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+
+    .about-image img{
+
+        width:100%;
+
+        max-width:400px;
+
+        height:auto;
+
+    }
+
+
+    .social-links{
+
+        width:100%;
+
+        justify-content:center;
+
+        gap:12px;
+
+    }
+
+
+    .social-links a{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:20px;
+
+    }
+
+
+    /* FOOTER */
+
     footer{
+
+        width:100%;
+
+        padding:40px 25px;
 
         flex-direction:column;
 
@@ -791,23 +1047,21 @@ footer{
 
     }
 
-
 }
-
 
 </style>
 
-
 </head>
-
 
 
 <body>
 
 
+<!-- =====================
+        NAVBAR
+===================== -->
 
 <nav>
-
 
 <a href="index.html" class="logo">
 
@@ -816,34 +1070,54 @@ PSYCHOVERSE
 </a>
 
 
-
 <ul>
 
-<li><a href="#">HOME</a></li>
+<li>
+<a href="#">
+HOME
+</a>
+</li>
 
-<li><a href="#games">GAMES</a></li>
 
-<li><a href="#about">ABOUT</a></li>
+<li>
+<a href="#games">
+GAMES
+</a>
+</li>
 
-<li><a href="contact.html">CONTACT</a></li>
+
+<li>
+<a href="#about">
+ABOUT
+</a>
+</li>
+
+
+<li>
+<a href="contact.html">
+CONTACT
+</a>
+</li>
+
 </ul>
-
 
 </nav>
 
 
-
+<!-- =====================
+        HERO
+===================== -->
 
 <section class="hero">
-
 
 <div class="hero-content">
 
 
 <div class="studio-label">
-INDIE HORROR GAMES
-</div>
 
+INDIE HORROR GAMES
+
+</div>
 
 
 <h1>
@@ -853,14 +1127,12 @@ PSYCHOVERSE
 </h1>
 
 
-
 <p class="hero-description">
 
 Independent game studio creating atmospheric horror experiences,
 unsettling stories and memorable worlds.
 
 </p>
-
 
 
 <div class="hero-buttons">
@@ -873,8 +1145,10 @@ OUR GAMES
 </a>
 
 
-
-<a href="https://store.steampowered.com/curator/45547185" target="_blank" class="btn btn-secondary">
+<a
+href="https://store.steampowered.com/curator/45547185"
+target="_blank"
+class="btn btn-secondary">
 
 PLAY NOW ON STEAM
 
@@ -886,12 +1160,12 @@ PLAY NOW ON STEAM
 
 </div>
 
-
 </section>
 
 
-
-
+<!-- =====================
+        GAMES
+===================== -->
 
 <section class="games" id="games">
 
@@ -910,38 +1184,41 @@ Our Games
 </h2>
 
 
-
 <div class="games-grid">
 
 
-<a href="games/terrors-to-unveil/index.html" class="game-card terrors-card">
+<a
+href="games/terrors-to-unveil/index.html"
+class="game-card terrors-card">
 
 
 <div class="game-info">
 
 
 <h3>
+
 Terrors to Unveil
+
 </h3>
 
 
 <p>
+
 A psychological horror anthology series featuring multiple terrifying stories and unforgettable encounters.
+
 </p>
 
 
 <span class="btn btn-primary">
+
 VIEW SERIES
+
 </span>
 
 
 </div>
 
-
 </a>
-
-
-
 
 
 <div class="game-card morrow-card">
@@ -951,28 +1228,31 @@ VIEW SERIES
 
 
 <h3>
+
 Morrow Creek Tales
+
 </h3>
 
 
 <p>
+
 A new horror universe filled with mysterious locations, dark secrets and disturbing stories.
+
 </p>
 
 
-<a href="games/morrow-creek-tales/index.html" class="btn btn-primary">
+<a
+href="games/morrow-creek-tales/index.html"
+class="btn btn-primary">
+
 VIEW SERIES
+
 </a>
 
 
 </div>
 
-
 </div>
-
-
-
-
 
 
 <div class="game-card jester-card">
@@ -982,34 +1262,41 @@ VIEW SERIES
 
 
 <h3>
+
 The Jester
+
 </h3>
 
 
 <p>
+
 A standalone horror experience where nothing is as it seems.
+
 </p>
 
 
-<a href="games/the-jester/index.html" class="btn btn-primary">
+<a
+href="games/the-jester/index.html"
+class="btn btn-primary">
+
 VIEW GAME
+
 </a>
 
 
 </div>
 
-
 </div>
 
 
 </div>
-
 
 </section>
 
 
-
-
+<!-- =====================
+        ABOUT
+===================== -->
 
 <section class="about" id="about">
 
@@ -1021,17 +1308,23 @@ VIEW GAME
 
 
 <div class="section-label">
+
 ABOUT THE CREATOR
+
 </div>
 
 
 <h2>
+
 Dionisis Papadimitropoulos
+
 </h2>
 
 
 <h3>
+
 Founder of PsychoVerse
+
 </h3>
 
 
@@ -1049,37 +1342,54 @@ Through PsychoVerse, my goal is to create memorable games that leave a lasting i
 </div>
 
 
-
 <div class="about-image">
+
 
 <img src="about.png">
 
 
 <div class="social-links">
 
-<a href="https://www.instagram.com/psychodevs_/" target="_blank">
+
+<a
+href="https://www.instagram.com/psychodevs_/"
+target="_blank"
+aria-label="Instagram">
+
 <i class="fa-brands fa-instagram"></i>
+
 </a>
 
 
-<a href="https://x.com/PsychoYT19" target="_blank">
+<a
+href="https://x.com/PsychoYT19"
+target="_blank"
+aria-label="X">
+
 <i class="fa-brands fa-x-twitter"></i>
+
 </a>
 
 
-<a href="https://store.steampowered.com/curator/45547185" target="_blank">
+<a
+href="https://store.steampowered.com/curator/45547185"
+target="_blank"
+aria-label="Steam">
+
 <i class="fa-brands fa-steam"></i>
+
 </a>
 
 
-<a href="https://discord.gg/HpYQPjRCKS" target="_blank">
-    <i class="fa-brands fa-discord"></i>
-</a>
+<a
+href="https://discord.gg/HpYQPjRCKS"
+target="_blank"
+aria-label="Discord">
+
 <i class="fa-brands fa-discord"></i>
+
 </a>
 
-</div>
-
 
 </div>
 
@@ -1087,17 +1397,16 @@ Through PsychoVerse, my goal is to create memorable games that leave a lasting i
 </div>
 
 
-
 </div>
-
 
 </section>
 
 
+<!-- =====================
+        FOOTER
+===================== -->
 
-
-
-<footer id="contact">
+<footer>
 
 
 <div class="footer-logo">
@@ -1116,6 +1425,11 @@ PSYCHOVERSE
 
 </footer>
 
+
+<!-- =====================
+        ABOUT ANIMATION
+===================== -->
+
 <script>
 
 const aboutSection = document.querySelector(".about");
@@ -1123,23 +1437,23 @@ const aboutSection = document.querySelector(".about");
 
 const aboutObserver = new IntersectionObserver(
 
-    (entries) => {
+(entries) => {
 
-        entries.forEach((entry) => {
+entries.forEach((entry) => {
 
-            if(entry.isIntersecting){
+if(entry.isIntersecting){
 
-                aboutSection.classList.add("show");
+aboutSection.classList.add("show");
 
-            }
+}
 
-        });
+});
 
-    },
+},
 
-    {
-        threshold:0.25
-    }
+{
+threshold:0.25
+}
 
 );
 
@@ -1147,6 +1461,7 @@ const aboutObserver = new IntersectionObserver(
 aboutObserver.observe(aboutSection);
 
 </script>
+
 
 </body>
 
