@@ -30,10 +30,15 @@ html{
 
 
 body{
+
     background:#050505;
+
     color:white;
+
     font-family:Arial, Helvetica, sans-serif;
+
     overflow-x:hidden;
+
 }
 
 
@@ -43,7 +48,7 @@ body{
 
 nav{
 
-    position:absolute;
+    position:fixed;
 
     top:0;
     left:0;
@@ -54,18 +59,21 @@ nav{
     display:flex;
 
     justify-content:space-between;
+
     align-items:center;
 
     padding:0 7%;
 
-    z-index:10;
+    z-index:100;
 
     background:
     linear-gradient(
         to bottom,
-        rgba(0,0,0,0.85),
-        transparent
+        rgba(0,0,0,0.90),
+        rgba(0,0,0,0.20)
     );
+
+    backdrop-filter:blur(4px);
 
 }
 
@@ -119,6 +127,180 @@ nav a:hover{
 
 
 /* =====================
+        HAMBURGER
+===================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    padding:5px;
+
+}
+
+
+/* =====================
+        MOBILE MENU
+===================== */
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:#111;
+
+    z-index:200;
+
+    padding:80px 12%;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(-20px);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        visibility .35s ease;
+
+}
+
+
+.mobile-menu.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+
+.mobile-menu-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:25px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    line-height:1;
+
+}
+
+
+.mobile-menu ul{
+
+    list-style:none;
+
+    margin-top:80px;
+
+}
+
+
+.mobile-menu li{
+
+    margin-bottom:45px;
+
+    opacity:0;
+
+    transform:translateX(-20px);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+
+}
+
+
+.mobile-menu.active li{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+.mobile-menu.active li:nth-child(1){
+
+    transition-delay:.08s;
+
+}
+
+
+.mobile-menu.active li:nth-child(2){
+
+    transition-delay:.14s;
+
+}
+
+
+.mobile-menu.active li:nth-child(3){
+
+    transition-delay:.20s;
+
+}
+
+
+.mobile-menu.active li:nth-child(4){
+
+    transition-delay:.26s;
+
+}
+
+
+.mobile-menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:38px;
+
+    font-weight:normal;
+
+    transition:.3s;
+
+}
+
+
+.mobile-menu a:hover{
+
+    color:#aaa;
+
+}
+
+
+/* =====================
         HERO
 ===================== */
 
@@ -130,7 +312,7 @@ nav a:hover{
 
     align-items:center;
 
-    padding:140px 7% 100px;
+    padding:180px 7% 100px;
 
     background-image:
 
@@ -730,112 +912,6 @@ footer{
         MOBILE
 ===================== */
 
-/* =====================
-      MOBILE MENU
-===================== */
-
-.menu-toggle{
-
-    display:none;
-
-    background:none;
-    border:none;
-
-    color:white;
-
-    font-size:32px;
-
-    cursor:pointer;
-
-    padding:0;
-
-}
-
-
-/* MOBILE MENU */
-
-.mobile-menu{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100vh;
-
-    background:#111;
-
-    z-index:100;
-
-    display:none;
-
-    padding:80px 12%;
-
-}
-
-
-.mobile-menu.active{
-
-    display:block;
-
-}
-
-
-.mobile-menu-close{
-
-    position:absolute;
-
-    top:30px;
-    right:30px;
-
-    background:none;
-    border:none;
-
-    color:white;
-
-    font-size:40px;
-
-    cursor:pointer;
-
-}
-
-
-.mobile-menu ul{
-
-    list-style:none;
-
-    margin-top:80px;
-
-}
-
-
-.mobile-menu li{
-
-    margin-bottom:45px;
-
-}
-
-
-.mobile-menu a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:38px;
-
-    font-weight:normal;
-
-}
-
-
-.mobile-menu a:hover{
-
-    color:#aaa;
-
-}
-        
 @media(max-width:900px){
 
     html,
@@ -850,9 +926,9 @@ footer{
     }
 
 
-    nav{
+    /* NAVBAR */
 
-        position:absolute;
+    nav{
 
         width:100%;
 
@@ -874,16 +950,16 @@ footer{
 
     nav ul{
 
-    display:none;
+        display:none;
 
-}
+    }
 
 
-.menu-toggle{
+    .menu-toggle{
 
-    display:block;
+        display:block;
 
-}
+    }
 
 
     /* HERO */
@@ -1160,6 +1236,36 @@ footer{
 
     }
 
+
+    /* MOBILE MENU */
+
+    .mobile-menu{
+
+        padding:70px 30px;
+
+    }
+
+
+    .mobile-menu ul{
+
+        margin-top:70px;
+
+    }
+
+
+    .mobile-menu li{
+
+        margin-bottom:35px;
+
+    }
+
+
+    .mobile-menu a{
+
+        font-size:32px;
+
+    }
+
 }
 
 </style>
@@ -1214,53 +1320,77 @@ CONTACT
 
 </ul>
 
-<button class="menu-toggle" onclick="openMenu()">
-    ☰
+
+<button
+class="menu-toggle"
+onclick="openMenu()"
+aria-label="Open menu">
+
+☰
+
 </button>
-        
+
 </nav>
+
+
+<!-- =====================
+        MOBILE MENU
+===================== -->
 
 <div class="mobile-menu" id="mobileMenu">
 
-    <button class="mobile-menu-close" onclick="closeMenu()">
-        ×
-    </button>
 
-    <ul>
+<button
+class="mobile-menu-close"
+onclick="closeMenu()"
+aria-label="Close menu">
 
-        <li>
-            <a href="index.html" onclick="closeMenu()">
-                HOME
-            </a>
-        </li>
+×
 
-        <li>
-            <a href="#games" onclick="closeMenu()">
-                GAMES
-            </a>
-        </li>
+</button>
 
-        <li>
-            <a href="#about" onclick="closeMenu()">
-                ABOUT
-            </a>
-        </li>
 
-        <li>
-            <a href="contact.html">
-                CONTACT
-            </a>
-        </li>
+<ul>
 
-    </ul>
+<li>
+<a href="index.html" onclick="closeMenu()">
+HOME
+</a>
+</li>
 
-</div>        
+
+<li>
+<a href="#games" onclick="closeMenu()">
+GAMES
+</a>
+</li>
+
+
+<li>
+<a href="#about" onclick="closeMenu()">
+ABOUT
+</a>
+</li>
+
+
+<li>
+<a href="contact.html">
+CONTACT
+</a>
+</li>
+
+</ul>
+
+
+</div>
+
 
 <!-- =====================
         HERO
 ===================== -->
 
 <section class="hero">
+
 
 <div class="hero-content">
 
@@ -1290,7 +1420,9 @@ unsettling stories and memorable worlds.
 <div class="hero-buttons">
 
 
-<a href="#games" class="btn btn-primary">
+<a
+href="#games"
+class="btn btn-primary">
 
 OUR GAMES
 
@@ -1319,7 +1451,9 @@ PLAY NOW ON STEAM
         GAMES
 ===================== -->
 
-<section class="games" id="games">
+<section
+class="games"
+id="games">
 
 
 <div class="section-label">
@@ -1450,7 +1584,9 @@ VIEW GAME
         ABOUT
 ===================== -->
 
-<section class="about" id="about">
+<section
+class="about"
+id="about">
 
 
 <div class="about-container">
@@ -1579,58 +1715,64 @@ PSYCHOVERSE
 
 
 <!-- =====================
-        ABOUT ANIMATION
+        JAVASCRIPT
 ===================== -->
 
 <script>
 
-const aboutSection = document.querySelector(".about");
-
-
-const aboutObserver = new IntersectionObserver(
-
-(entries) => {
-
-entries.forEach((entry) => {
-
-if(entry.isIntersecting){
-
-aboutSection.classList.add("show");
-
-}
-
-});
-
-},
-
-{
-threshold:0.25
-}
-
-);
-
-
-aboutObserver.observe(aboutSection);
-
-</script>
-
-<script>
 
 function openMenu(){
 
-    document.getElementById("mobileMenu").classList.add("active");
+    document
+        .getElementById("mobileMenu")
+        .classList.add("active");
 
 }
 
 
 function closeMenu(){
 
-    document.getElementById("mobileMenu").classList.remove("active");
+    document
+        .getElementById("mobileMenu")
+        .classList.remove("active");
 
 }
 
+
+const aboutSection =
+    document.querySelector(".about");
+
+
+const aboutObserver =
+    new IntersectionObserver(
+
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if(entry.isIntersecting){
+
+                    aboutSection.classList.add("show");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:0.25
+        }
+
+    );
+
+
+aboutObserver.observe(aboutSection);
+
+
 </script>
-        
+
+
 </body>
 
 </html>
