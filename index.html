@@ -650,7 +650,74 @@ nav a:hover{
 }
 
 
+/* =====================
+        ABOUT ANIMATION
+===================== */
 
+.about-content{
+
+    opacity:0;
+
+    transform:translateX(-70px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+
+}
+
+
+.about-image{
+
+    opacity:0;
+
+    transform:translateX(70px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+
+}
+
+
+.about.show .about-content{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+.about.show .about-image{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+.social-links{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:
+        opacity 0.8s ease 0.5s,
+        transform 0.8s ease 0.5s;
+
+}
+
+
+.about.show .social-links{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
 
 
 
@@ -1053,7 +1120,37 @@ PSYCHOVERSE
 
 </footer>
 
+<script>
 
+const aboutSection = document.querySelector(".about");
+
+
+const aboutObserver = new IntersectionObserver(
+
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if(entry.isIntersecting){
+
+                aboutSection.classList.add("show");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:0.25
+    }
+
+);
+
+
+aboutObserver.observe(aboutSection);
+
+</script>
 
 </body>
 
