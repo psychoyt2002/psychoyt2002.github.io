@@ -105,6 +105,7 @@ nav ul{
 
 
 nav a{
+
     color:white;
 
     text-decoration:none;
@@ -925,94 +926,87 @@ footer{
     }
 
 
-    .game-card{
-    width:100%;
-    min-height:520px;
-    aspect-ratio:auto;
-}
+    /* =========================
+       MOBILE TERRORS CARD
+    ========================= */
+
+    .terrors-card{
+
+        display:block;
+
+        width:100%;
+
+        min-height:0;
+
+        padding:0;
+
+        background:#111;
+
+        overflow:hidden;
+
+    }
 
 
-  .terrors-card{
-    background-image:
-    linear-gradient(
-        to top,
-        rgba(0,0,0,.65),
-        rgba(0,0,0,.05)
-    ),
-    url("terrors-cover-mobile.png");
+    .terrors-card::before{
 
-    background-size:cover;
-    background-position:center;
-}      
-            
-/* =========================
-   MOBILE GAME CARD STYLE
-========================= */
+        content:"";
 
-.terrors-card{
-    display:block;
+        display:block;
 
-    width:100%;
+        width:100%;
 
-    min-height:0;
+        aspect-ratio:2 / 3;
 
-    padding-top:150%;
+        background-image:url("terrors-cover-mobile.png");
 
-    background-image:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,0),
-            rgba(0,0,0,0)
-        ),
-        url("terrors-cover-mobile.png");
+        background-size:cover;
 
-    background-size:100% auto;
+        background-position:center;
 
-    background-repeat:no-repeat;
+        background-repeat:no-repeat;
 
-    background-position:top center;
-
-    background-color:#111;
-
-}
+    }
 
 
-.terrors-card .game-info{
+    .terrors-card .game-info{
 
-    padding:35px 30px 40px;
+        padding:35px 30px 40px;
 
-}
-
-
-.terrors-card .game-info h3{
-
-    font-size:30px;
-
-    margin-bottom:25px;
-
-}
+    }
 
 
-.terrors-card .game-info p{
+    .terrors-card .game-info h3{
 
-    font-size:18px;
+        font-size:30px;
 
-    line-height:1.7;
+        line-height:1.2;
 
-    margin-bottom:30px;
+        margin-bottom:25px;
 
-}
-
-
-.terrors-card .game-info .btn{
-
-    padding:16px 30px;
-
-}
-    
+    }
 
 
-    /* NAVBAR */
+    .terrors-card .game-info p{
+
+        font-size:18px;
+
+        line-height:1.7;
+
+        margin-bottom:30px;
+
+    }
+
+
+    .terrors-card .game-info .btn{
+
+        padding:16px 30px;
+
+    }
+
+
+    /* =====================
+            NAVBAR
+    ===================== */
 
     nav{
 
@@ -1048,7 +1042,9 @@ footer{
     }
 
 
-    /* HERO */
+    /* =====================
+            HERO
+    ===================== */
 
     .hero{
 
@@ -1135,74 +1131,78 @@ footer{
     }
 
 
-   /* GAMES */
+    /* =====================
+            GAMES
+    ===================== */
 
-.games{
+    .games{
 
-    width:100%;
+        width:100%;
 
-    padding:80px 25px;
+        padding:80px 25px;
 
-}
-
-
-.games h2{
-
-    font-size:42px;
-
-    line-height:1.1;
-
-    margin-bottom:40px;
-
-}
+    }
 
 
-.games-grid{
+    .games h2{
 
-    width:100%;
+        font-size:42px;
 
-    grid-template-columns:1fr;
+        line-height:1.1;
 
-    gap:25px;
+        margin-bottom:40px;
 
-}
-
-
-.game-card{
-
-    width:100%;
-
-    min-height:520px;
-
-    aspect-ratio:auto;
-
-}
+    }
 
 
-.game-info{
+    .games-grid{
 
-    padding:25px;
+        width:100%;
 
-}
+        grid-template-columns:1fr;
 
+        gap:25px;
 
-.game-info h3{
-
-    font-size:28px;
-
-}
+    }
 
 
-.game-info p{
+    .game-card{
 
-    font-size:16px;
+        width:100%;
 
-    line-height:1.6;
+        min-height:520px;
 
-}
+        aspect-ratio:auto;
+
+    }
 
 
-    /* ABOUT */
+    .game-info{
+
+        padding:25px;
+
+    }
+
+
+    .game-info h3{
+
+        font-size:28px;
+
+    }
+
+
+    .game-info p{
+
+        font-size:16px;
+
+        line-height:1.6;
+
+    }
+
+
+    /* =====================
+            ABOUT
+    ===================== */
 
     .about{
 
@@ -1310,7 +1310,9 @@ footer{
     }
 
 
-    /* FOOTER */
+    /* =====================
+            FOOTER
+    ===================== */
 
     footer{
 
@@ -1325,7 +1327,9 @@ footer{
     }
 
 
-    /* MOBILE MENU */
+    /* =====================
+            MOBILE MENU
+    ===================== */
 
     .mobile-menu{
 
