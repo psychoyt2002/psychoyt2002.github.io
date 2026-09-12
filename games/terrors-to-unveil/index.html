@@ -64,25 +64,19 @@ nav{
 
     font-size:25px;
     font-weight:bold;
-
     letter-spacing:5px;
-
-}
-
-
-.logo a{
 
     color:white;
     text-decoration:none;
 
-    transition:opacity .25s ease;
+    transition:color 0.3s ease;
 
 }
 
 
-.logo a:hover{
+.logo:hover{
 
-    opacity:.7;
+    color:#CC0000;
 
 }
 
@@ -90,21 +84,21 @@ nav{
 
 /* BACK TO HOME */
 
-nav > a{
+nav > a:not(.logo){
 
     color:white;
     text-decoration:none;
 
     font-size:15px;
 
-    transition:opacity .25s ease;
+    transition:color 0.3s ease;
 
 }
 
 
-nav > a:hover{
+nav > a:not(.logo):hover{
 
-    opacity:.65;
+    color:#CC0000;
 
 }
 
@@ -115,6 +109,7 @@ nav > a:hover{
 ========================= */
 
 .hero{
+
     min-height:600px;
 
     display:flex;
@@ -123,15 +118,18 @@ nav > a:hover{
     padding:80px 7%;
 
     background:
+
     linear-gradient(
         to right,
         rgba(0,0,0,.9),
         rgba(0,0,0,.4)
     ),
+
     url("terrors-bg.jpg");
 
     background-size:cover;
     background-position:center;
+
 }
 
 
@@ -358,7 +356,7 @@ footer{
     }
 
 
-    nav > a{
+    nav > a:not(.logo){
 
         font-size:13px;
 
@@ -502,7 +500,7 @@ footer{
     }
 
 
-    nav > a{
+    nav > a:not(.logo){
 
         font-size:12px;
 
@@ -585,7 +583,7 @@ footer{
     }
 
 
-    nav > a{
+    nav > a:not(.logo){
 
         font-size:11px;
 
@@ -619,20 +617,16 @@ footer{
 
 <!-- CLICKABLE PSYCHOVERSE LOGO -->
 
-<div class="logo">
-
-<a href="../../index.html">
-PSYCHOVERSE
+<a href="../../index.html" class="logo">
+    PSYCHOVERSE
 </a>
-
-</div>
 
 
 
 <!-- BACK TO HOME -->
 
 <a href="../../index.html">
-BACK TO HOME
+    BACK TO HOME
 </a>
 
 
